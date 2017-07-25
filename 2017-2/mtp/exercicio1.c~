@@ -1,0 +1,7 @@
+#include "stdio.h"
+
+int somar_tres_maiores(int,int,int,int);
+int main(){
+  printf("Testando");
+  return 0;
+}

@@ -1,3 +1,6 @@
+<?php
+    require_once("utilidades/funcoes.php");
+?>
   <!DOCTYPE html>
   <html>
     <head>
@@ -66,28 +69,17 @@
 
                          <?php
                             if(isset($_POST['submit'])){
-                                $maior = $_POST['valor1'];
-                                $menor = $_POST['valor1'];
+                               
+                                $valor1 = $_POST['valor1'];
                                 $valor2 = $_POST['valor2'];
                                 $valor3 = $_POST['valor3'];
                                 
-                                if($valor2 > $maior){
-                                    $maior = $valor2;
-                                }
-                                if($valor3 > $maior){
-                                    $maior = $valor3;
-                                }
-                                if($valor2 < $menor){
-                                    $menor = $valor2;
-                                }
-                                if($valor3 < $menor )
-                                    $menor = $valor3;
-                                
-                                
-                                
-                                echo "O Maior elemento é ".$maior." Menor elemento é ".$menor." Seu valor dobrado é ".($menor *2);
+                                $m = menor($valor1,$valor2,$valor3);
 
-
+                                echo "O Menor elemento é ".$m."<br>";
+                                echo "O Maior elemento é ".maior($valor1,$valor2,$valor3)."<br>";
+                                echo "O dobro do menor elemento é ".dobro($m)."<br>";
+                               
                             }
                          ?>
                     </form>

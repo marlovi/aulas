@@ -18,7 +18,7 @@
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
   <li><a href="exercicio1.php">um</a></li>
-  <li><a href="#!">two</a></li>
+  <li><a href="exercicio2.php">Dois</a></li>
   <li class="divider"></li>
   <li><a href="#!">three</a></li>
 </ul>

@@ -1,7 +1,7 @@
 <?php
     require_once("utilidades/funcoes.php");
 ?>
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html>
     <head>
       <!--Import Google Icon Font-->
@@ -12,7 +12,7 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <meta charset="UTF-8">
-      <title>Lista Exercícios</title>
+      <title>Exercício 2</title>
     </head>
 
     <body>
@@ -39,49 +39,48 @@
         
         <div class="container">
             <div class="row">
-                <div class="col s12">
+                <div class="col s12 center">
+                    <h2>Exercício Número 2 </h2>
                     <form method="POST">
+                    
+                        <div class="row">
+                            <div class="col s12 input-field">
+                                <input id="lado1" name = "lado1" type="text" />
+                                <label for="lado1">Lado 1 </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 input-field">
+                                <input id="lado2" name = "lado2" type="text" />
+                                <label for="lado2">Lado 2 </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 input-field">
+                                <input id="lado3" name = "lado3" type="text" />
+                                <label for="lado3">Lado 3 </label>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col s12 center">
-                                <h2>Informe o maior valor e mostra o valor do menor dobrado</h2>
-                            </div>                                
-                        </div> 
-                        <div class="row">
-                            <div class="col s3 input-field">
-                                <input id="valor1" type="text" name="valor1" />
-                                <label for="valor1">Valor 1</label> 
-                            </div>   
-                            <div class="col s3 input-field">
-                                <input id="valor2" type="text" name="valor2" >
-                                <label for="valor2"> Valor 2</label>
-                            </div> 
-                            <div class="col s3 input-field">
-                                <input id="valor3" type="text" name="valor3" >
-                                <label for="valor3">Valor 3</label>
+                                <button class="btn waves-effect waves-light" type="submit" name="submit"><i class="material-icons right">send</i>Calcular</button>
                             </div>
-                           
-                        </div> 
-                         <div class="row">
-                              <div class="col s12 center">
-                                <button class="btn waves-effect waves-light" type="submit" name="submit">Calcular</button>
-                            </div>
-                         </div>
+                        </div>
 
-                         <?php
+                        <?php
                             if(isset($_POST['submit'])){
-                               
-                                $valor1 = $_POST['valor1'];
-                                $valor2 = $_POST['valor2'];
-                                $valor3 = $_POST['valor3'];
-                                
-                                $m = menor($valor1,$valor2,$valor3);
+                              //  echo (e_triangulo($_POST['lado1'],$_POST['lado2'],$_POST['lado3'])) ? "Forma um Triangulo": "Não é um triangulo";
 
-                                echo "O Menor elemento é ".$m."<br>";
-                                echo "O Maior elemento é ".maior($valor1,$valor2,$valor3)."<br>";
-                                echo "O dobro do menor elemento é ".dobro($m)."<br>";
-                               
+
+                                ///() ? "string de solução verdadeira" : "String de solução de negação"
+
+
+
+                                if(e_triangulo($_POST['lado1'],$_POST['lado2'],$_POST['lado3'])){
+                                    echo (equilatero($_POST['lado1'],$_POST['lado2'],$_POST['lado3']))?"É equilatero":"Não é equilatero";
+                                }
                             }
-                         ?>
+                        ?>
                     </form>
                 </div>
             </div>

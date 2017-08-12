@@ -27,5 +27,21 @@
         return $resultado;
     }
 
+    function e_triangulo($l1,$l2,$l3){
+        $resultado = FALSE;
+
+        if(($l1+$l2) > $l3 )
+            $resultado = TRUE;
+        if(($l2+$l3)>$l1)
+            $resultado = TRUE;
+        if(($l1+$l3) > $l2)
+            $resultado = TRUE;
+
+            return $resultado;
+    }
+
+    function equilatero($x,$y,$z){
+        return ( ($x==$y) && ($x == $z)&& ($y == $z)  );
+    }
 
 ?>

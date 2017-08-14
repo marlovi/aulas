@@ -39,7 +39,7 @@
 
 
     }
-
+/*
     $x  = new Endereco();
     $x->setLogradouro("Avenida");
     $empresa = new Empresa();
@@ -54,6 +54,6 @@
     $f = $empresa->getFuncionario();
 
     echo $f->getNome();
-
+*/
 
 ?>

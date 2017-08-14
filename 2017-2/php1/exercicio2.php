@@ -78,6 +78,7 @@
 
                                 if(e_triangulo($_POST['lado1'],$_POST['lado2'],$_POST['lado3'])){
                                     echo (equilatero($_POST['lado1'],$_POST['lado2'],$_POST['lado3']))?"É equilatero":"Não é equilatero";
+                                    
                                 }
                             }
                         ?>

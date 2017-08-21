@@ -43,7 +43,7 @@
     $x  = new Endereco();
     $x->setLogradouro("Avenida");
     $empresa = new Empresa();
-
+x
     $funcionario = new Funcionario();
     $funcionario->setNome("João pereira");
 

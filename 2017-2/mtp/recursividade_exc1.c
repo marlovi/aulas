@@ -7,6 +7,7 @@ int somatorio_classico(int);
 int somatorio_nao_classico(int,int);
 int cubo_elementos(int,int);
 int menu();
+void crescente(int,int);
 int main(){
     int op=-1;
     
@@ -33,7 +34,10 @@ int main(){
                 printf("Resultado %d  \n",resposta);
             } break;
             case 3:{
-
+                int v;
+                printf("Informe um valor para N \n");
+                scanf("%d",&v);
+                crescente(v,0);
             } break;
         }
     }while(op!=0);
@@ -51,10 +55,22 @@ int cubo_elementos(int valor, int elemento){
 
 int menu(){
     int o;
-    printf("Digite 1 para executar o exercício número 2\n");
+    printf("Digite 1 para executar o exercício número 1\n");
     printf("Digite 2 para executar o exercício número 2\n");
+    printf("Digite 3 para executar o exercício número 3\n");
     scanf("%d",&o);
     return o;
+}
+
+void crescente(int valor,int elemento){
+    if(elemento > valor){ 
+        printf("\n");    
+        return ;
+    }
+    else {
+        printf("%d , ",elemento);
+        crescente(valor,elemento+1);
+    }
 }
 int somatorio_classico(int n){
     if( n == 0 )

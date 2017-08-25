@@ -41,6 +41,23 @@ require_once "conexao.php";
                           <button class="btn waves-effect waves-light" type="submit" name="submit" ><i class="material-icons right">send</i>Enviar</button>
                       </div>
                   </div>
+                  <?php 
+                        if(isset($_POST['submit'])){
+                            $con = conectar();
+
+                            $sql ="INSERT INTO `cliente`(`nome`,`telefone`,`email`) 
+                            VALUES ('".$_POST['nome']."','".$_POST['telefone']."','".$_POST['email']."')";
+
+                            if(mysqli_query($con,$sql)){
+                                echo "<script> alert('Cadastrado com Sucesso') </script>";;
+                            }else{
+                                echo "ERRO ao inserir  ".$sql." ".mysqli_error($sql);
+                            }
+
+                            mysqli_close($con);
+                        }
+
+                 ?>
               </form>
           </div>
 

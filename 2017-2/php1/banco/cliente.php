@@ -44,9 +44,9 @@ require_once "conexao.php";
                   <?php 
                         if(isset($_POST['submit'])){
                             $con = conectar();
-
+                            $nome = ($_POST['nome'] == null)? NULL : $_POST['nome']; 
                             $sql ="INSERT INTO `cliente`(`nome`,`telefone`,`email`) 
-                            VALUES ('".$_POST['nome']."','".$_POST['telefone']."','".$_POST['email']."')";
+                            VALUES (".$nome.",'".$_POST['telefone']."','".$_POST['email']."')";
 
                             if(mysqli_query($con,$sql)){
                                 echo "<script> alert('Cadastrado com Sucesso') </script>";;
@@ -55,6 +55,7 @@ require_once "conexao.php";
                             }
 
                             mysqli_close($con);
+
                         }
 
                  ?>

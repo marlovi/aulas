@@ -1,6 +1,8 @@
 #include "stdio.h"
 #include "math.h"
-//#include <stdio.h>
+//#include <stdio.h> 
+float tribonacci(float);   
+float eleva(float,float);
 float media(int*,int,int);
 int soma(int*,int,int);
 void decrescente(int);
@@ -76,6 +78,20 @@ int main(){
  
  
              }break;
+             case 7 : { 
+                 float k, n;
+                 printf("Informe um valor  k \n");
+                 scanf("%f",&k);
+                 printf("Informe um valor para N  (k^n)\n");
+                 scanf("%f",&n);
+                 printf(" \n\n\n %f\n\n ",eleva(k,n));
+             } break;
+             case 8:{
+                 float n;
+                 printf("Informe um valor \n");
+                 scanf("%f",&n);
+                 printf("Elemento  é %f  \n",tribonacci(n));
+             }break;
             default:
                 printf("Opção Inválida");
         }
@@ -86,6 +102,27 @@ int main(){
     return 0;
 }
 
+float tribonacci(float n){
+    if( n == 0 )
+       return 0.f;
+    if(n == 1 )
+       return 0.f;
+    if(n == 2 )
+     return 1.f;
+    if(n > 2)
+     return ((tribonacci(n-1) + tribonacci(n-2))+tribonacci(n-3));
+}
+
+float eleva(float k,float n){
+   // 5³  = 5 * 5 * 5 ........ ???
+   if(n==0)
+    return 1;
+   if(n == 1){
+       return k;
+   } else
+    return k * eleva(k,n-1);
+
+}
 
 float media(int *vetor,int tamanho,int index){
     if(tamanho-1==index){
@@ -119,6 +156,9 @@ int menu(){
     printf("Digite 3 para executar o exercício número 3\n");
     printf("Digite 4 para executar o exercício número 4\n");
     printf("Digite 5 para executar o exercício número 5\n");
+    printf("Digite 6 para executar o exercício número 6\n");
+    printf("Digite 7 para executar o exercício número 7\n");
+    printf("Digite 8 para excutar o exercício número 8\n");
     scanf("%d",&o);
     return o;
 }

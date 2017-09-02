@@ -13,7 +13,7 @@ require_once "conexao.php";
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Aula de Inserção no banco de dados</title>
   </head>
 
@@ -46,7 +46,7 @@ require_once "conexao.php";
                             $con = conectar();
                             $nome = ($_POST['nome'] == null)? NULL : $_POST['nome']; 
                             $sql ="INSERT INTO `cliente`(`nome`,`telefone`,`email`) 
-                            VALUES (".$nome.",'".$_POST['telefone']."','".$_POST['email']."')";
+                            VALUES ('".$nome."','".$_POST['telefone']."','".$_POST['email']."')";
 
                             if(mysqli_query($con,$sql)){
                                 echo "<script> alert('Cadastrado com Sucesso') </script>";;

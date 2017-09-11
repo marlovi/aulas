@@ -26,6 +26,8 @@
               <th>Código</th>
               <th>Nome</th>
               <th>Cpf</th>
+              <th>Alterar</th>
+              <th>Excluir</th>
           </tr>
         </thead>
 
@@ -40,6 +42,8 @@
                 echo "<td>".$value->getCodigo()."</td>";
                 echo "<td>".$value->getNome()."</td>";
                 echo "<td>".$value->getCpf()."</td>";
+                echo "<td> <a href='alterarcliente.php?codigo=".$value->getCodigo()."'><i class='material-icons'>update</i></a></td>";
+                echo "<td> <a href='deletarcliente.php?codigo=".$value->getCodigo()."'><i class='material-icons'>delete</i></a></td>";
             echo "</tr>";
          }
            

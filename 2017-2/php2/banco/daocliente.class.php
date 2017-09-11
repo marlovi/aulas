@@ -23,8 +23,17 @@
 
             return $salvado;
         }
-        public static function delete($cliente){
-            
+        public static function delete($codigo){
+            $resultado = FALSE;
+            $sql ="DELETE FROM `cliente` WHERE `codigo`= ".$codigo;
+
+            $con = Conexao::getConnection();
+
+            if($con->query($sql) == TRUE){
+                $resultado = TRUE;
+            }
+            $con->close();
+            return $resultado;
         }
 
         public static function pesquisarTodos(){

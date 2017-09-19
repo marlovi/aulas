@@ -43,12 +43,11 @@
               <?php
                     if(isset($_POST['submit'])){
                         $cliente->setNome($_POST['nome']);
+                        
                         $cliente->setCpf($_POST['cpf']);
                         if(DaoCliente::update($cliente)){
-                            echo "<script> alert ( 'Alterado com sucesso ' ) </script>";
-                        }
-
-                        
+                            echo "<script> alert ( 'Alterado com sucesso' ) </script>";
+                        }                        
                     }
               ?>
           </form>

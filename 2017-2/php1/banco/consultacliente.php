@@ -25,6 +25,8 @@
               <th>Nome</th>
               <th>Telefone</th>
               <th>E-Mail</th>
+              <th>Alterar</th>
+              <th>Excluir</th>
           </tr>
           <tbody>
           
@@ -43,6 +45,7 @@
                             echo "<td>".$row['nome']."</td>";
                             echo "<td>".$row['telefone']."</td>";
                             echo "<td>".$row['email']."</td>";
+                            echo "<td> <a href ='alterarcliente.php?codigo=".$row['codigo']."' > <i class='material-icons'>update</i></a>    </td>";
                       echo "</tr>";
                     }
                 }

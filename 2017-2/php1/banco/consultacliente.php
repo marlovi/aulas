@@ -46,6 +46,7 @@
                             echo "<td>".$row['telefone']."</td>";
                             echo "<td>".$row['email']."</td>";
                             echo "<td> <a href ='alterarcliente.php?codigo=".$row['codigo']."' > <i class='material-icons'>update</i></a>    </td>";
+                            echo "<td> <a href ='excluircliente.php?codigo=".$row['codigo']."' > <i class='material-icons'>delete</i></a>    </td>";
                       echo "</tr>";
                     }
                 }

@@ -1,10 +1,17 @@
 #include <stdio.h>
 #define QTD 3
+
+typedef struct {
+    int numero;
+    char logradouro[100];
+    int cep;
+} Endereco;
 typedef struct{
     char nome[100];
     int matricula;
     float n1;
     float n2;
+    Endereco endereco;
 } Aluno;
 
 int main(){ 
@@ -21,6 +28,8 @@ int main(){
         scanf("%f",&aluno[i].n1);
         printf("Informe a segunda nota \n");
         scanf("%f",&aluno[i].n2);
+        printf("Informe o número da rua");
+        scanf("%d",&aluno[i].endereco.numero);
         }   
    
         for(i=0;i<QTD;i++){

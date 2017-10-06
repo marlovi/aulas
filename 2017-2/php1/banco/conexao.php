@@ -4,7 +4,7 @@ function conectar(){
     $servername = "localhost";
     $username="marlus";
     $password="s1lv@385";
-    $dbname="php1";
+    $dbname="combo";
 
     $con = mysqli_connect($servername,$username,$password,$dbname);
 

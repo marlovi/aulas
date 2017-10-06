@@ -63,7 +63,7 @@
                       
                         $con = conectar();
                         
-                                            $sql = "DELETE FROM cliente WHERE `codigo` = ".$resultado['codigo'];
+                                            $sql = "DELETE FROM `cliente` WHERE `codigo` = ".$resultado['codigo'];
                         
                             if(mysqli_query($con,$sql)){
                                 echo "<script> alert('Excluido com sucesso') </script>";

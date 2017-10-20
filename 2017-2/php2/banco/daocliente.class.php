@@ -52,7 +52,7 @@
                      $cliente->setCpf($row['cpf']);
                      $cliente->setNome($row['nome']);
 
-                     array_push($resultado,$cliente);//Adicionando o cliente na última possição do vetor
+                     array_push($resultado , $cliente);//Adicionando o cliente na última possição do vetor
                 }
             }
             $con->close();

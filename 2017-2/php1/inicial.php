@@ -12,10 +12,7 @@
     </head>
 
     <body>
-    <?php
-    echo "teste"; 
-    
-    ?>
+   
     
 
       <!--Import jQuery before materialize.js-->

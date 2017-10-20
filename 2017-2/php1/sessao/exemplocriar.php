@@ -29,10 +29,12 @@
                     </div>
                    
                     <div class="col s3">
-                        <button name="submit" class="btn waves-effect waves-light" type="submit"> <i class="material-icons right">send</i>Enviar </button>
+                        <button name="submit" class="btn waves-effect waves-light" type="submit"> 
+                        <i class="material-icons right">send</i>Enviar </button>
                     </div>
                     <div class="col s3">
-                        <button name="delete" class="btn waves-effect waves-light" type="submit"> <i class="material-icons right">send</i>Enviar </button>
+                        <button name="delete" class="btn waves-effect waves-light" type="submit"> 
+                        <i class="material-icons right">send</i>Enviar </button>
                     </div>
                  </div>
                  <?php
@@ -40,7 +42,7 @@
                             $_SESSION['valor1'] = $_POST['v1'];
                             $_SESSION['valor2'] = $_POST['v2'];
                         }elseif(isset($_POST['delete'])){
-                           // session_unset();
+                            session_unset();
                            session_destroy();
                         }
 

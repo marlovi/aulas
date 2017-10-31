@@ -1,43 +1,23 @@
-#include <stdio.h>
-#include <string.h>
+#include "stdio.h"
+#include "stdlib.h"
 
-typedef struct {
-        int matricula;
-        char nome[100];
-        float nota1;
-        float nota2;
-} Aluno;
-
-
-#define QUANTIDADE_DE_ALUNOS 3
-
-
+struct marlus{
+        int a;
+        int b;
+};
 
 
 int main(){
-        Aluno alunos[QUANTIDADE_DE_ALUNOS];
+         struct marlus *mar;
+        mar = (struct marlus*)malloc(sizeof(struct marlus));
+        mar->b =10;
+        mar->a = 11;
+        int *x;
+        x =  calloc(10,sizeof(int));
 
-        printf("Dados: nome(sem espacos), matricula, nota1, nota2\n");
-        for(int i=0; (i < QUANTIDADE_DE_ALUNOS); i++){
-                printf("\nInforme os dados do aluno(%i): ",i+1);
-                fgets(alunos[i].nome,100,stdin);
-                __fpurge(stdin);
-                scanf("%i %f %f", &alunos[i].matricula,
-                        &alunos[i].nota1, &alunos[i].nota2);
-                        __fpurge(stdin);
-        }
+        x[0] = 10;
 
-        printf("\nMatricula\tNome\tMedia\n");
-        for(int i=0; (i < QUANTIDADE_DE_ALUNOS); i++){
-                printf("nome     ");
-                puts(alunos[i].nome);
-                printf("%i           %1.2f     ",alunos[i].matricula,
-                        (alunos[i].nota1 + alunos[i].nota2)/2);
-
-
-                //printf("\n\n");
-        }
-
-       
-        return 0;
+        printf("%d    %d",mar->a,mar->b);
+        free(x);
+return 0;
 }

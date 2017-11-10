@@ -7,7 +7,8 @@ struct disciplina{
 } ;
 
 int main(){
-    
+    int n=3;
+    int cc[] = {1,2,3};
     float *(v); 
     struct disciplina *IF;
     

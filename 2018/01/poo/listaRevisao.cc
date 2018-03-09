@@ -1,12 +1,13 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
-
+#include <iomanip>
 using namespace std;
 int menu();
 template<typename T> void swap(const T &, const T &);
 int main(){ 
     int op =0;
+    cout <<setprecision(3) << 2.33333333333333 << endl;
     do{
         op = menu();
         switch(op){
@@ -26,6 +27,9 @@ int main(){
             
           } 
           break;
+          case 2:{
+              //aqui 
+          }break;
         }
     }while(op != 0);
     return 0;
@@ -45,3 +49,6 @@ template<typename T> void swap(const T &a, const T & b){
     b=a;
     a=aux;
 }
+
+//criara função 
+

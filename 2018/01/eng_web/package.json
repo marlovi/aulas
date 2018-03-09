@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^1.15.1"
+    "nodemon": "^1.15.1",
+    "scanf": "^1.0.0"
   }
 }

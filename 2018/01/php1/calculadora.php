@@ -1,7 +1,31 @@
 <?php 
 session_start();
     if(! isset($_SESSION['display'])){
-        $_SESSION['display']="";
+        $_SESSION['display']=0;
+    }
+
+
+    function reload(){
+        echo "<script>
+                     window.location.href='http://localhost/aulas/2018/01/php1/calculadora.php' 
+                     </script>"; // obrigando dar 2 refresh
+    }
+
+    function soma($v1,$v2){
+        return intval($v1) + intval($v2);
+    }
+    function sub($v1,$v2){
+        return intval($v1) - intval($v2);
+    }
+
+
+
+
+
+    function formatarPtBr($valor){
+        $formatter = new NumberFormatter('pt_BR',  NumberFormatter::CURRENCY);
+        $valor = $formatter->formatCurrency($valor,'BRL');
+        echo $valor;
     }
    // var_dump($_SESSION['display']);
 ?>
@@ -54,7 +78,7 @@ session_start();
                     <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit" name="dois">2</button>
                 </div>
                 <div class="col s1">
-                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit">3</button>
+                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit" name="tres">3</button>
                 </div>
                 <div class="col s1">
                     <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit">/</button>
@@ -62,13 +86,13 @@ session_start();
             </div>
             <div class="row">
                 <div class="col s1">
-                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit">4</button>
+                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit" name="quatro">4</button>
                 </div>
                 <div class="col s1">
-                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit">5</button>
+                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit" name="cinco">5</button>
                 </div>
                 <div class="col s1">
-                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit">6</button>
+                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit" name="seis">6</button>
                 </div>
                 <div class="col s1">
                     <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit">*</button>
@@ -76,51 +100,114 @@ session_start();
             </div>
             <div class="row">
                 <div class="col s1">
-                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit">7</button>
+                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit" name="sete">7</button>
                 </div>
                 <div class="col s1">
-                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit">8</button>
+                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit" name="oito">8</button>
                 </div>
                 <div class="col s1">
-                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit">9</button>
+                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit" name="nove">9</button>
                 </div>
                 <div class="col s1">
-                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit">-</button>
+                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit" name="sub">-</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col s1">
-                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit">0</button>
+                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit" name="zero">0</button>
                 </div>
                 <div class="col s1">
                     <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit">.</button>
                 </div>
                 <div class="col s1">
-                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit">=</button>
+                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit" name="igual">=</button>
                 </div>
                 <div class="col s1">
                     <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit" name ="mais">+</button>
                 </div>
             </div>
-
+            <div class="row">
+            <div class="col s1">
+                    <button class=" blue-grey darken-4 btn waves-effect waves-yellow" type="submit" name ="limpar">limpar</button>
+                </div>
+            </div>
             <?php
                 if(isset($_POST['um'])){
                    
                     $valor = $_SESSION['display'];
                     $_SESSION['display'] = $valor.""."1";  
+                    reload();
                     
                     
-                    echo "<script>
-                     window.location.href='http://localhost/aulas/2018/01/php1/calculadora.php' 
-                     </script>"; // obrigando dar 2 refresh
                 }else  if(isset($_POST['dois'])){
                     $valor = $_SESSION['display'];
                     $_SESSION['display'] = $valor.""."2";   
-                    echo "<script>
-                    window.location.href='http://localhost/aulas/2018/01/php1/calculadora.php' 
-                    </script>"; // obrigando dar 2 refresh
+                    reload();
+                }else if( isset($_POST['tres'])){
+                    $valor = $_SESSION['display'];
+                    $_SESSION['display'] = $valor.""."3";   
+                   reload();
+                }else if(isset($_POST['quatro'])){
+                    $valor = $_SESSION['display'];
+                    $_SESSION['display'] = $valor.""."4";   
+                    reload();
+                }else if(isset($_POST['cinco'])){
+                    $valor = $_SESSION['display'];
+                    $_SESSION['display'] = $valor.""."5";   
+                   reload();
+                }else if(isset($_POST['seis'])){
+                    $valor = $_SESSION['display'];
+                    $_SESSION['display'] = $valor.""."6";   
+                   reload();
+                }else if(isset($_POST['sete'])){
+                    $valor = $_SESSION['display'];
+                    $_SESSION['display'] = $valor.""."7";   
+                    reload();
+                }else if(isset($_POST['oito'])){
+                    $valor = $_SESSION['display'];
+                    $_SESSION['display'] = $valor.""."8";   
+                   reload();
+                }else if(isset($_POST['nove'])){
+                    $valor = $_SESSION['display'];
+                    $_SESSION['display'] = $valor.""."9";   
+                   reload();
+                }else if(isset($_POST['zero'])){
+                    $valor = $_SESSION['display'];
+                    $_SESSION['display'] = $valor.""."0";   
+                    reload();
+                } else if(isset($_POST['limpar'])){
+                $_SESSION['display'] = "";
+                    reload();
+                } 
+                else if(isset($_POST['igual'])){
+                  if(isset($_SESSION['operacao'])){
+                      if($_SESSION['operacao'] == 'mais'){
+                         
+                        $valor = soma($_SESSION['mais']   ,   $_SESSION['display']);
+
+                        formatarPtBr($valor);
+
+                      }
+                      if($_SESSION['operacao'] == 'sub'){
+                          $v = sub($_SESSION['sub'] , $_SESSION['display']);
+                          formatarPtBr($v);
+                      }
+                  }
+                }else if(isset($_POST['mais'])){
+                    $_SESSION['mais'] = $_SESSION['display'];
+                    $_SESSION['display'] = 0;
+                    $_SESSION['operacao'] = 'mais';
+
+                   reload();
+                }else if(isset($_POST['sub'])){
+                    $_SESSION['sub'] = $_SESSION['display'];
+                    $_SESSION['display'] = 0;
+                    $_SESSION['operacao'] = 'sub';
                 }
+
+                
                
+           
             ?>
         </form>
       </div>

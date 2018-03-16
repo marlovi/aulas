@@ -1,0 +1,6 @@
+#include "carro.h"
+
+
+Carro::Carro(){
+  cout << "Carro sendo instânciado" <<endl;
+}

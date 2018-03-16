@@ -1,0 +1,9 @@
+I faced with the same problem on Ubuntu 16.04 and angular CLI 1.0.0-beta.30
+
+The problem was related with Inotify Watches Limit on Linux.
+To solve to issue I increased the watches limit to 512K
+
+sudo sysctl fs.inotify.max_user_watches=524288
+sudo sysctl -p --system
+
+After that I restarted my IDE (WebStorm in my case) and after that the change detection started to work.

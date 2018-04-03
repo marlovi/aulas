@@ -1,8 +1,6 @@
 <?php 
     require_once("projeto_escola/escola.class.php");
     require_once("projeto_escola/daoescola.class.php");
-    require_once("projeto_escola/daodiretor.class.php");
-    require_once("projeto_escola/diretor.class.php");
 ?>
 
 <!DOCTYPE html>
@@ -89,22 +87,7 @@
                         <label for="endereco">Endereco</label>
                     </div>
                 </div>
-                <?php
-                echo "<div class='row'>";
-                  echo "<div class='input-field col s12'>";
-                  echo  "<select name='diretor'>";
-                     echo "<option value='' disabled selected>SELECIONE</option>";
-                      $daoDiretor = new DaoDiretor();
-                     $diretores=  $daoDiretor->getAll();
 
-                     foreach ($diretores as $key => $value){
-                       echo "   <option value={$value->getCodigo()}>{$value->getNome()}</option>";
-                     }
-                      echo "</select>";
-                    echo "<label>Diretor</label>";
-                  echo "</div>";
-                echo "</div>";
-      ?>
                 <div class="row">
                     <div class="col center s12">
                         <button class="waves-effect waves-light btn" type="submit" name="submit">
@@ -119,7 +102,7 @@
                          $escola->setTelefone($_POST['telefone']);
                          $escola->setEndereco($_POST['endereco']);
                          $escola->setEmail($_POST['email']);
-                         $escola->setDiretor(intval($_POST['diretor']));
+
 
                          $dao =new DaoEscola();
                          if($dao->save($escola)){
@@ -161,7 +144,6 @@
     <script>
       $("document").ready(function(){
         $(".button-collapse").sideNav();
-        $('select').material_select();
       });
     </script>
   </body>

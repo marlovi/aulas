@@ -1,8 +1,8 @@
 <?php 
     class Conexao{
         private $servername = "localhost";
-        private $username="marlus";
-        private $password="marlus";
+        private $username="aluno";
+        private $password="aluno123";
         private $database="aula";
 
         public function connection(){

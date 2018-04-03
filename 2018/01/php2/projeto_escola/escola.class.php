@@ -5,6 +5,7 @@
         private $telefone;
         private $email;
         private $endereco;
+        private $diretor; // composicao
 
 
 
@@ -44,6 +45,18 @@
             $this->endereco = $endereco;
         }
 
+
+        public function getDiretor()
+        {
+                return $this->diretor;
+        }
+
+        public function setDiretor($diretor)
+        {
+                $this->diretor = $diretor;
+
+                
+        }
     }
 
 

@@ -6,6 +6,14 @@
         private $email;
         private $endereco;
         private $diretor; // composicao
+        private $categoria;
+
+        public function getCategoria(){
+            return $this->categoria;
+        }
+        public function setCategoria($categoria){
+            $this->categoria = $categoria;
+        }
 
 
 

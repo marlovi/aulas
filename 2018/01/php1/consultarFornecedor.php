@@ -24,6 +24,8 @@
               <th>Nome</th>
               <th>CNPJ</th>
               <th> Razão Social </th>
+              <th>Alterar</th>
+              <th>Excluir</th>
           </tr>
         </thead>
 
@@ -41,6 +43,8 @@
                 echo "<td>{$row['nome']}</td>";
                 echo "<td>{$row['cnpj']}</td>";
                 echo "<td>{$row['razao_social']}</td>";
+                echo "<td> <a href='atualizarFornecedor.php?codigo=".$row['id_fornecedor']."' ><i class='material-icons'> update </i> </a> </td>";
+                echo "<td> <a href='excluirFornecedor.php?codigo=".$row['id_fornecedor']."' ><i class='material-icons'> delete </i> </a> </td>";
               echo "</tr>";
             }
         }

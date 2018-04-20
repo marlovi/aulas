@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const fatorial_1 = require("./fatorial");
+const aluno_model_1 = require("./aluno.model");
+const primario_model_1 = require("./primario.model");
+let fat = new fatorial_1.Fatorial;
+let joao = new aluno_model_1.Aluno('João da Silva', 56);
+let maria = new aluno_model_1.Aluno('Maria Aparecida');
+let array = [joao, maria];
+console.log(`O valor do de 5 fatorial é   ${fat.calcular(5)}`);
+console.log(joao);
+console.log(JSON.stringify(joao));
+console.log(array);
+console.log(JSON.stringify(array));
+let ana = new primario_model_1.Primario('Ana luiza');
+console.log(JSON.stringify(ana));

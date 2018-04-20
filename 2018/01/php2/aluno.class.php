@@ -1,6 +1,6 @@
 <?php 
     class Aluno{
-        private $nome; //atributos
+        private $nome; //a8tributos
         private $telefone;
         private $maiorIdade;
         private $matricula;

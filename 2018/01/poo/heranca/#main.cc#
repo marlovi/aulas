@@ -1,0 +1,14 @@
+#include "pessoafisica.h"
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+  PessoaFisica* f = new PessoaFisica();
+  f->setNome("Alessandro Souza Santos");
+ 
+  
+  cout << f->getNome() <<endl;
+  return 0;
+}

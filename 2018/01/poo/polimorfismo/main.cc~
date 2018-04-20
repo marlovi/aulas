@@ -1,0 +1,15 @@
+#include <iostream>
+#include "calcular.h"
+
+using namespace std;
+int main(){
+
+  Calcular* c = new Calcular();
+
+  cout << c->soma(5)
+       << endl <<
+       c->soma(1,2)
+       << endl;
+  return 0;
+
+}

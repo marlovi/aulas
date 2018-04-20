@@ -1,0 +1,6 @@
+#include "pessoafisica.h"
+
+
+PessoaFisica::PessoaFisica():Pessoa(){
+  cout <<"Pessoa Fisica "<<endl;
+}

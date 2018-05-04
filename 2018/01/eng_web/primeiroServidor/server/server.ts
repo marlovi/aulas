@@ -1,11 +1,19 @@
 import * as restify from 'restify'
-import {Router} from '../common/router'
+import mongoose from 'mongoose'
+import { Router } from '../common/router';
+
 
 export class Server{
     application: restify.Server = restify.createServer({
         name:"Aula de REST",
         version: "1.0"
     })
+
+    initializeDb(): any{
+        (<any>mongoose).Promise = global.Promise  // comando obrigatório
+        return mongoose.connect('mongodb://localhost/exemplo')
+
+    }
 
     initRouters(routers:Router[]): Promise<any>{
         return new Promise( (resolve,reject) =>{
@@ -28,6 +36,9 @@ export class Server{
     }
 
     bootstrap(routers: Router[] = []):Promise<Server>{
-        return this.initRouters(routers).then( () => this)
+       return this.initializeDb().then( 
+           () =>  this.initRouters(routers).then( 
+           () => this) )
+       
     }
 }

@@ -13,6 +13,9 @@
     "restify": "^7.1.1"
   },
   "dependencies": {
-    "@types/restify": "^5.0.7"
+    "@types/mongodb": "^3.0.17",
+    "@types/mongoose": "^5.0.11",
+    "@types/restify": "^5.0.7",
+    "mongoose": "^5.0.17"
   }
 }

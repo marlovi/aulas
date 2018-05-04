@@ -6,14 +6,22 @@ var __importStar = (this && this.__importStar) || function (mod) {
     result["default"] = mod;
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const restify = __importStar(require("restify"));
+const mongoose_1 = __importDefault(require("mongoose"));
 class Server {
     constructor() {
         this.application = restify.createServer({
             name: "Aula de REST",
             version: "1.0"
         });
+    }
+    initializeDb() {
+        mongoose_1.default.Promise = global.Promise; // comando obrigatório
+        return mongoose_1.default.connect('mongodb://localhost/exemplo');
     }
     initRouters(routers) {
         return new Promise((resolve, reject) => {
@@ -33,7 +41,7 @@ class Server {
         });
     }
     bootstrap(routers = []) {
-        return this.initRouters(routers).then(() => this);
+        return this.initializeDb().then(() => this.initRouters(routers).then(() => this));
     }
 }
 exports.Server = Server;

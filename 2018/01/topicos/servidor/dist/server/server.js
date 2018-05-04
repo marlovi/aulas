@@ -6,16 +6,24 @@ var __importStar = (this && this.__importStar) || function (mod) {
     result["default"] = mod;
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const restify = __importStar(require("restify"));
 const tratamento_error_1 = require("./tratamento.error");
 const ambiente_1 = require("../comum/ambiente");
+const mongoose_1 = __importDefault(require("mongoose"));
 class Server {
     constructor() {
         this.aplicacao = restify.createServer({
             name: "Servidor técnico 2018",
             version: "0.1"
         });
+    }
+    inicializarBanco() {
+        mongoose_1.default.Promise = global.Promise;
+        return mongoose_1.default.connect('mongodb://localhost/topicos');
     }
     iniciaRotas(rotas) {
         return new Promise((resolve, reject) => {
@@ -36,7 +44,7 @@ class Server {
         });
     }
     inicializar(rotas = []) {
-        return this.iniciaRotas(rotas).then(() => this);
+        return this.inicializarBanco().then(() => this.iniciaRotas(rotas).then(() => this));
     }
 }
 exports.Server = Server;

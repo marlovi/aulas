@@ -1,41 +1,26 @@
 import * as restify from 'restify'
 import {Rotas} from '../comum/rotas'
+import { User } from './user.model';
 
 class UserRotas extends Rotas {
     aplicarRotas(aplicacao: restify.Server) {
         aplicacao.get('/usuarios', (req,resp,next) =>{
-            console.log(req)
-            resp.json([{nome:"Higor",
-            endereco:"Rua 10 ",
-            email:"Higor@ifgoiano.edu.br",
-            genero:"Masculino"},{nome:"Higor",
-            endereco:"Rua 10 ",
-            email:"Higor@ifgoiano.edu.br",
-            genero:"Masculino"},{nome:"Higor",
-            endereco:"Rua 10 ",
-            email:"Higor@ifgoiano.edu.br",
-            genero:"Masculino"},{nome:"Higor",
-            endereco:"Rua 10 ",
-            email:"Higor@ifgoiano.edu.br",
-            genero:"Masculino"},{nome:"Higor",
-            endereco:"Rua 10 ",
-            email:"Higor@ifgoiano.edu.br",
-            genero:"Masculino"},{nome:"Higor",
-            endereco:"Rua 10 ",
-            email:"Higor@ifgoiano.edu.br",
-            genero:"Masculino"},{nome:"Higor",
-            endereco:"Rua 10 ",
-            email:"Higor@ifgoiano.edu.br",
-            genero:"Masculino"},{nome:"Higor",
-            endereco:"Rua 10 ",
-            email:"Higor@ifgoiano.edu.br",
-            genero:"Masculino"},{nome:"Higor",
-            endereco:"Rua 10 ",
-            email:"Higor@ifgoiano.edu.br",
-            genero:"Masculino"},{nome:"Higor",
-            endereco:"Rua 10 ",
-            email:"Higor@ifgoiano.edu.br",
-            genero:"Masculino"}])
+           User.find().then( users =>{
+               resp.json(users)
+               return next()
+           })
+            
+        })
+
+        aplicacao.post('/usuario', (req, resp, next)=>{
+            let user = new User(req.body)
+
+            user.save().then( user =>{
+                resp.json(user)
+            },err =>{
+                console.log(err)
+            })
+
             return next()
         })
         //rota

@@ -29,7 +29,7 @@ class UserRouter extends Router {
             let user = new User(req.body)
     
             user.save().then(user => {
-                user.password = undefined 
+                //user.password = undefined 
                 resp.json(user)
             })
 

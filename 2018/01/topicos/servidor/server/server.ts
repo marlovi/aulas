@@ -2,13 +2,18 @@ import * as restify from 'restify'
 import {Rotas} from '../comum/rotas'
 import { tratamentoErros } from './tratamento.error';
 import {ambiente} from '../comum/ambiente'
-
+import mongoose from 'mongoose'
 
 export class Server{
     aplicacao: restify.Server  = restify.createServer({
         name:"Servidor técnico 2018",
         version:"0.1"
     })
+
+    inicializarBanco():any{
+        (<any> mongoose).Promise  = global.Promise
+        return mongoose.connect('mongodb://localhost/topicos')
+    }
 
     iniciaRotas( rotas: Rotas[]):Promise<any>{
         return new Promise<any>( (resolve,reject) =>{
@@ -33,7 +38,10 @@ export class Server{
 
 
     inicializar(rotas:Rotas[] = []):Promise<Server>{
-        return this.iniciaRotas(rotas).then( () =>this  )
+        return this.inicializarBanco().then(
+            () =>  this.iniciaRotas(rotas).then( () =>this  )
+        )
+        
     }
 
 }

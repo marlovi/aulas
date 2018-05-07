@@ -2,9 +2,29 @@
     require_once("projeto_escola/escola.class.php");
     require_once("projeto_escola/daoescola.class.php");
 
+    $nome="";
+    $telefone="";
+    $endereco="";
+    $email="";
+    $diretor_id= "";
+    $categoria_id="";
 
    if(isset($_GET['codigo'])){
-       echo $_GET['codigo'];
+       $id = $_GET['codigo'];
+    $sql = " select `nome`, `telefone`, `endereco`, `email`, `diretor_id_diretor`,` categoria_id_categoria` from `escola` where `id_escola` = {$id}";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            $nome = $row['nome'];
+            $telefone = $row['telefone'];
+            $endereco = $row['endereco'];
+            $email = $row['$email'];
+            $diretor_id = $row['diretor_id_diretor'];
+            $categoria_id = $row[' categoria_id_categoria'];
+
+        }
+    }
    }
 ?>
 
@@ -74,21 +94,21 @@
             <form  method="post">
                 <div class="row">
                     <div class="col s4 input-field">
-                        <input type="text" name="nome" id="nome" readonly>
+                        <input type="text" name="nome" id="nome" >
                         <label for="nome">Nome</label>
                     </div>
                     <div class="col s4 input-field">
-                        <input type="text" name="telefone" id="telefone" readonly>
+                        <input type="text" name="telefone" id="telefone" >
                         <label for="telefone">Telefone</label>
                     </div>
                     <div class="col s4 input-field">
-                        <input type="email" name="email" id="email" readonly>
+                        <input type="email" name="email" id="email" >
                         <label for="email">Email</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col input-field s12">
-                        <input type="text" name="endereco" id="endereco" readonly>
+                        <input type="text" name="endereco" id="endereco" >
                         <label for="endereco">Endereco</label>
                     </div>
                 </div>

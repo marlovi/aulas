@@ -3,8 +3,8 @@
     require_once("projeto_escola/daoescola.class.php");
 
 
-   if(isset($_POST['codigo'])){
-       echo $_POST['codigo'];
+   if(isset($_GET['codigo'])){
+       echo $_GET['codigo'];
    }
 ?>
 

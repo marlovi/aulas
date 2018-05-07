@@ -98,7 +98,7 @@
                  echo "<option value='' disabled selected>SELECIONE UM DIRETOR</option>";
                  $daoDiretor = new DaoDiretor();
                 $diretores = $daoDiretor->getAll();
-                var_dump($diretores);
+                
                 if($diretores != null)
 
                   foreach ($diretores as $key => $diretor) {

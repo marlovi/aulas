@@ -57,8 +57,51 @@
 
             return true;
         }
+
+
+        public function pesquisarEscola($id){
+            $conexao = new Conexao(); 
+            $escola  = NULL;
+            $con = $conexao->connection();
+            $sql = " select `id_escola`,`nome`, `telefone`, `endereco`, `email`, `diretor_id_diretor`,`categoria_id_categoria` from `escola` where `id_escola` = {$id}";
+            $result = $con->query($sql);
+        
+            if($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    $escola = new Escola();
+                    $id = $row['id_escola'];
+                    $nome = $row['nome'];
+                    $telefone = $row['telefone'];
+                    $endereco = $row['endereco'];
+                    $email = $row['email'];
+                    $diretor_id = $row['diretor_id_diretor'];
+                    $categoria_id = $row['categoria_id_categoria'];
+    
+                    $escola->setNome($nome);
+                    $escola->setTelefone($telefone);
+                    $escola->setEndereco($endereco);
+                    $escola->setEmail($email);
+                    $escola->setDiretor($diretor_id);
+                    $escola->setCategoria($categoria_id);
+                    $escola->setCodigo($id);
+    
+                }
+            }
+    
+            $con->close();
+    
+            var_dump($escola);
+            return $escola;
+        
+        
+    
+        }
+
         
     }
+
+
+   
 
     /*$dao = new DaoEscola();
 

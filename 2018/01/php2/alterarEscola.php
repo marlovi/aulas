@@ -2,30 +2,17 @@
     require_once("projeto_escola/escola.class.php");
     require_once("projeto_escola/daoescola.class.php");
 
-    $nome="";
-    $telefone="";
-    $endereco="";
-    $email="";
-    $diretor_id= "";
-    $categoria_id="";
+   $escola = NULL;
 
    if(isset($_GET['codigo'])){
        $id = $_GET['codigo'];
-    $sql = " select `nome`, `telefone`, `endereco`, `email`, `diretor_id_diretor`,` categoria_id_categoria` from `escola` where `id_escola` = {$id}";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            $nome = $row['nome'];
-            $telefone = $row['telefone'];
-            $endereco = $row['endereco'];
-            $email = $row['$email'];
-            $diretor_id = $row['diretor_id_diretor'];
-            $categoria_id = $row[' categoria_id_categoria'];
-
-        }
-    }
+       $dao = new DaoEscola();
+        $escola = $dao->pesquisarEscola($id);
    }
+   
+
+    
+   
 ?>
 
 <!DOCTYPE html>

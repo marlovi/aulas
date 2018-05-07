@@ -1,6 +1,7 @@
 <?php 
     require_once("projeto_escola/escola.class.php");
     require_once("projeto_escola/daoescola.class.php");
+    require_once("projeto_escola/daodiretor.class.php");
 ?>
 
 <!DOCTYPE html>
@@ -88,12 +89,46 @@
                     </div>
                 </div>
 
+                
                 <div class="row">
+                <div class="input-field col s6">
+
+                <?php
+                 echo "<select>";
+                 echo "<option value='' disabled selected>SELECIONE UM DIRETOR</option>";
+                 $daoDiretor = new DaoDiretor();
+                $diretores = $daoDiretor->getAll();
+                var_dump($diretores);
+                if($diretores != null)
+
+                  foreach ($diretores as $key => $diretor) {
+                    # code...
+                    echo "<option value='{$diretor->getCodigo()}'>{$diretor->getNome()}</option>";
+                  }
+                 
+                 else echo "null";
+                echo "</select>";
+                echo "<label>Diretor</label>"
+                ?>
+               </div>
+
+             <div class="input-field col s6">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                 <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label>Materialize Select</label>
+             </div>
+           </div>
+
+           <div class="row">
                     <div class="col center s12">
                         <button class="waves-effect waves-light btn" type="submit" name="submit">
                             <i class="material-icons right">send</i>Cadastrar</button>
                     </div>
-                </div>
+          </div>
 
                 <?php 
                      if(isset($_POST['submit'])){
@@ -144,6 +179,7 @@
     <script>
       $("document").ready(function(){
         $(".button-collapse").sideNav();
+        $('select').material_select();
       });
     </script>
   </body>

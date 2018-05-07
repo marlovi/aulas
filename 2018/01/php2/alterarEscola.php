@@ -7,7 +7,7 @@
    if(isset($_GET['codigo'])){
        $id = $_GET['codigo'];
        $dao = new DaoEscola();
-        $escola = $dao->pesquisarEscola($id);
+       $escola = $dao->pesquisarEscola($id);
    }
    
 
@@ -81,7 +81,7 @@
             <form  method="post">
                 <div class="row">
                     <div class="col s4 input-field">
-                        <input type="text" name="nome" id="nome" >
+                        <input type="text" name="nome" id="nome"  value="<?php if($escola != null){echo $escola->getNome();}else{echo '';} ?>">
                         <label for="nome">Nome</label>
                     </div>
                     <div class="col s4 input-field">

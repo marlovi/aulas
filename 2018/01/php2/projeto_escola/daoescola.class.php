@@ -90,7 +90,7 @@
     
             $con->close();
     
-            var_dump($escola);
+         
             return $escola;
         
         

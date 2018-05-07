@@ -85,17 +85,17 @@
                         <label for="nome">Nome</label>
                     </div>
                     <div class="col s4 input-field">
-                        <input type="text" name="telefone" id="telefone" >
+                        <input type="text" name="telefone" id="telefone" value="<?php if($escola != null){echo $escola->getTelefone();}else{echo '';} ?>">
                         <label for="telefone">Telefone</label>
                     </div>
                     <div class="col s4 input-field">
-                        <input type="email" name="email" id="email" >
+                        <input type="email" name="email" id="email" value="<?php if($escola != null){echo $escola->getEmail();}else{echo '';}  ?>">
                         <label for="email">Email</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col input-field s12">
-                        <input type="text" name="endereco" id="endereco" >
+                        <input type="text" name="endereco" id="endereco" value="<?php if($escola != null){echo $escola->getEmail();}else{echo '';}  ?>" >
                         <label for="endereco">Endereco</label>
                     </div>
                 </div>

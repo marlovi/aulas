@@ -2,6 +2,7 @@ import * as restify from 'restify'
 import mongoose from 'mongoose'
 import { Router } from '../common/router';
 import corsMiddleware from 'restify-cors-middleware';
+import { handleError } from './error.handler';
 
 
 export class Server{
@@ -20,7 +21,7 @@ export class Server{
     initRouters(routers:Router[]): Promise<any>{
         return new Promise( (resolve,reject) =>{
         try{
-            const corsOptions: corsMiddleware.Options = {
+           /* const corsOptions: corsMiddleware.Options = {
                 preflightMaxAge: 86400,
                 origins: ['*'],
                 allowHeaders: ['authorization'],
@@ -29,8 +30,8 @@ export class Server{
             const cors: corsMiddleware.CorsMiddleware = corsMiddleware(corsOptions)
       
             this.application.pre(cors.preflight)
-      
-            this.application.use(cors.actual)
+            
+            this.application.use(cors.actual)*/
             this.application.use(restify.plugins.queryParser())//geralmente utilizando no get para converter pesquisas
             this.application.use(restify.plugins.bodyParser())// convert json em object automaticamente
         
@@ -38,9 +39,12 @@ export class Server{
                 router.applyRouter(this.application)
             }
 
+
             this.application.listen(3000, () =>{
                 resolve(this.application)
             })
+
+            this.application.on('restifyError',handleError)
         }catch(err){    
             reject(err)
         }

@@ -11,7 +11,7 @@ class UserRouter extends Router {
             User.find().then(users =>{
                 resp.json(users)
                 return next()
-            })
+            }).catch(next)
             
         })
         application.get('/users/:id',  (req,resp, next)=>{
@@ -22,7 +22,7 @@ class UserRouter extends Router {
                 }
                 resp.send(404)
                 return next()
-            })
+            }).catch(next)
             return next()
         })
         application.post('/user', (req,resp,next)=>{
@@ -31,14 +31,27 @@ class UserRouter extends Router {
             user.save().then(user => {
                 //user.password = undefined 
                 resp.json(user)
-            })
-
-
-
-
+            }).catch(next)
             return next();
         })
-        
+
+        application.del('/user/:id' , (req,resp,next)=>{
+            User.remove({_id:req.params.id}).exec().then((result)=>{
+                if(result.n)
+                    resp.send(204)
+                else
+                    resp.send(404)
+                return next()
+            } ).catch(next)
+        })
+
+        application.patch('/user/:id', (req,resp , next) =>{
+            const options  = { new : true}
+            User.findByIdAndUpdate(req.params.id,req.body,options).then( user => {
+                resp.json(user)
+                return next()
+            }).catch(next)
+        })
     }
 }
 

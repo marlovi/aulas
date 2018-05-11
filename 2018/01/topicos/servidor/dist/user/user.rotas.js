@@ -19,6 +19,21 @@ class UserRotas extends rotas_1.Rotas {
             });
             return next();
         });
+        aplicacao.del('/usuario/:id', (req, resp, next) => {
+            user_model_1.User.remove({ _id: req.params.id }).exec().then((result) => {
+                if (result.n)
+                    resp.send(204);
+                else
+                    resp.send(404);
+                return next();
+            });
+        });
+        aplicacao.patch('/usuario/:id', (req, resp, next) => {
+            user_model_1.User.findByIdAndUpdate({ _id: req.params.id }, req.body, { new: true }).then(usuario => {
+                resp.json(usuario);
+                return next();
+            });
+        });
         //rota
     }
 }

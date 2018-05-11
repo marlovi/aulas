@@ -23,6 +23,25 @@ class UserRotas extends Rotas {
 
             return next()
         })
+
+        aplicacao.del('/usuario/:id', (req, resp, next)=>{
+            User.remove({_id: req.params.id}).exec().then( (result:any) =>{
+                if(result.n)
+                    resp.send(204)
+                else
+                resp.send(404)
+
+                return next()
+            })
+        })
+
+        aplicacao.patch('/usuario/:id', (req, resp, next) =>{
+            User.findByIdAndUpdate({_id: req.params.id}, req.body,{new: true}).then( usuario =>{
+                resp.json(usuario)
+                return next()
+            })
+        })
+
         //rota
         
     }

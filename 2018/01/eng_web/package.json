@@ -13,5 +13,8 @@
   "dependencies": {
     "nodemon": "^1.15.1",
     "scanf": "^1.0.0"
+  },
+  "devDependencies": {
+    "@angular/cli": "^6.0.3"
   }
 }

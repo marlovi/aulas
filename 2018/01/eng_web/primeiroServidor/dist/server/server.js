@@ -12,6 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const restify = __importStar(require("restify"));
 const mongoose_1 = __importDefault(require("mongoose"));
+const restify_cors_middleware_1 = __importDefault(require("restify-cors-middleware"));
 const error_handler_1 = require("./error.handler");
 class Server {
     constructor() {
@@ -27,17 +28,15 @@ class Server {
     initRouters(routers) {
         return new Promise((resolve, reject) => {
             try {
-                /* const corsOptions: corsMiddleware.Options = {
-                     preflightMaxAge: 86400,
-                     origins: ['*'],
-                     allowHeaders: ['authorization'],
-                     exposeHeaders: ['x-custom-header']
-                   }
-                 const cors: corsMiddleware.CorsMiddleware = corsMiddleware(corsOptions)
-           
-                 this.application.pre(cors.preflight)
-                 
-                 this.application.use(cors.actual)*/
+                const corsOptions = {
+                    preflightMaxAge: 86400,
+                    origins: ['*'],
+                    allowHeaders: ['authorization'],
+                    exposeHeaders: ['x-custom-header']
+                };
+                const cors = restify_cors_middleware_1.default(corsOptions);
+                this.application.pre(cors.preflight);
+                this.application.use(cors.actual);
                 this.application.use(restify.plugins.queryParser()); //geralmente utilizando no get para converter pesquisas
                 this.application.use(restify.plugins.bodyParser()); // convert json em object automaticamente
                 for (let router of routers) {

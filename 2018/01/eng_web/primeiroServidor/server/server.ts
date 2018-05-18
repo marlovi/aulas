@@ -21,7 +21,7 @@ export class Server{
     initRouters(routers:Router[]): Promise<any>{
         return new Promise( (resolve,reject) =>{
         try{
-           /* const corsOptions: corsMiddleware.Options = {
+            const corsOptions: corsMiddleware.Options = {
                 preflightMaxAge: 86400,
                 origins: ['*'],
                 allowHeaders: ['authorization'],
@@ -31,7 +31,7 @@ export class Server{
       
             this.application.pre(cors.preflight)
             
-            this.application.use(cors.actual)*/
+            this.application.use(cors.actual)
             this.application.use(restify.plugins.queryParser())//geralmente utilizando no get para converter pesquisas
             this.application.use(restify.plugins.bodyParser())// convert json em object automaticamente
         

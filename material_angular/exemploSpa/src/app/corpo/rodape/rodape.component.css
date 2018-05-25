@@ -1,0 +1,14 @@
+.text-muted {
+    color: #6c757d !important;
+    
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 83%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px;
+    background-color: #CDCDCD
+  }

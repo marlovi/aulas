@@ -1,3 +1,53 @@
-<p>
-  cadastro works!
-</p>
+
+
+  <div class="shadow p-4 mb-4 bg-white m-3">
+ 
+    <form >
+      <div class="form-group  ">
+       <div class="form-row p-2">
+        <div class="col-7">
+          <label for="nome">Nome</label>
+          <input type="text" class="form-control"  id="nome"  placeholder="Nome"   name="nome" [(ngModel)]="user.nome">
+         </div>
+         <div class="col">
+          <label for="telefone">Telefone</label>
+          <input type="text"  name="telefone" id="telefone" class="form-control" placeholder="(**)*****-****" [(ngModel)]="user.telefone"> 
+    
+         
+         </div>
+       </div>
+  
+       <div class="form-row p-2">
+          <div class="col">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId" placeholder="user@user.com" [(ngModel)]="user.email">
+            <small id="emailHelpId" class="form-text text-muted">Informe o endereço de email no formato ****@***.***</small>
+         
+          </div>        
+       </div>
+       
+       <div class="form-row p-2">
+         <div class="col-7">
+          <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" id="password" [(ngModel)]="user.password">
+         </div>
+       </div>
+       <div class="mx-auto p-2" style="width: 200px;">
+         
+          
+        
+        <input (click)="cadastrar()" name="cadastrar" id="cadastrar" class="btn btn-primary "  type="button" value="Cadastrar"> 
+      </div>
+
+    
+      </div>
+  
+  
+      
+      
+      </form>
+      {{user | json}}
+  </div>
+  
+
+

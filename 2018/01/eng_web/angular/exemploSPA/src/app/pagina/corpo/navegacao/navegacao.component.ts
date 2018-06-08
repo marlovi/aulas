@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from '../../conteudo/usuario/service/usuario.service';
+import { User } from '../../conteudo/usuario/cadastro/user.model';
 
 @Component({
   selector: 'app-navegacao',
@@ -8,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavegacaoComponent implements OnInit {
 
   constructor() { }
+
 
   ngOnInit() {
   }

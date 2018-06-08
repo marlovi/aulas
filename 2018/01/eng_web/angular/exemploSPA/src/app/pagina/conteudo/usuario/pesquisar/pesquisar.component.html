@@ -1,0 +1,24 @@
+<div class="shadow p-4 mb-4 bg-white m-3">
+  <form>
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="nome">Nome</th>
+              <th scope="elefone">Telefone</th>
+              <th scope="email">Email</th>  
+              <th scope="alterar">Alterar</th>
+              <th scope="excluir">Excluir</th>                
+            </tr>
+          </thead>
+          <tbody *ngFor="let user of items">
+            <tr>
+              <th scope="row">{{user.nome}}</th>
+              <td>{{user.telefone}}</td>
+              <td>{{user.email}}</td>
+              <td><a routerLink='/update' (click)="update(user)"><i class="material-icons">update</i></a></td>
+              <td><a routerLink='/delete' (click)="delete(user)"><i class="material-icons">delete</i></a></td>
+            </tr>           
+          </tbody>
+        </table>
+  </form>
+</div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../cadastro/user.model';
 import { UsuarioService } from '../service/usuario.service';
 import { CookiesService } from '@ngx-utils/cookies/src/cookies.service';
+import { isNull } from 'util';
 
 @Component({
   selector: 'app-delete',
@@ -17,7 +18,12 @@ export class DeleteComponent implements OnInit {
   }
 
   delete(){
-    this.service.delete(this.user)
+    this.service.delete(this.user).subscribe( any =>{
+      if(any === null){
+        alert('deletado com  sucesso')
+        
+      }
+    })
   }
   ngOnInit() {
   }

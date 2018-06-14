@@ -19,9 +19,9 @@ export class UsuarioService {
    public update(user:User):Observable<User>{
      return this.http.patch<User>(`http://localhost:3000/user/${user._id}`,user)
    }
-   public delete(user:User): void{
-     console.log(user)   
-     console.log(this.http.delete<User>(`http://localhost:3000/user/${user._id}`))
+   public delete(user:User): Observable<any>{
+     
+   return this.http.delete<User>(`http://localhost:3000/user/${user._id}`)
      
    }
 }

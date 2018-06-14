@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { UsuarioService } from '../service/usuario.service';
 import { User } from '../cadastro/user.model';
 
@@ -11,23 +11,33 @@ import { CookiesService } from '@ngx-utils/cookies/src/cookies.service';
 })
 export class PesquisarComponent implements OnInit {
   public items:User[] = []
+  
   constructor(private service:UsuarioService, private cookie:CookiesService) {
-   this.service.getAll().subscribe( users => {
-     this.items = users
-   })
+    this.service.getAll().subscribe( users => {
+      this.items = users
+    })
   }
+  
 
+
+  
     update(user:User) {
      // console.log(user)
 
      this.cookie.putObject('userUpdate',user)
     }
     delete(user:User) {
-      console.log(user)
+      this.cookie.putObject('userDelete',user)
     }
 
   
   ngOnInit() {
   }
+
+
+
+
+  
+
 
 }

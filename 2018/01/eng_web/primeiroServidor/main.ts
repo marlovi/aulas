@@ -9,6 +9,6 @@ server.bootstrap([usersRouter]).then( server => {
    
     console.log(`servidor executando na porta ${server.application.address().port}`)
 }).catch( error =>{
-    console.log(`Servidor não inicializou   ${error}`)
+    console.log(`Servidor não inicializou ..  ${error}`)
     process.exit(1)
 })

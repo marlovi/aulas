@@ -6,11 +6,11 @@
          <div class="form-row p-2">
           <div class="col-7">
             <label for="nome">Nome</label>
-            <input type="text" class="form-control"  id="nome"  placeholder="Nome"   name="nome" [(ngModel)]="user.nome"> 
+            <input type="text" class="form-control"  id="nome"  placeholder="Nome"   name="nome" [(ngModel)]="user.nome" readonly> 
            </div>
            <div class="col">
             <label for="telefone">Telefone</label>
-            <input type="text"  name="telefone" id="telefone" class="form-control" placeholder="(**)*****-****" [(ngModel)]="user.telefone"> 
+            <input type="text"  name="telefone" id="telefone" class="form-control" placeholder="(**)*****-****" [(ngModel)]="user.telefone" readonly> 
       
            
            </div>
@@ -19,7 +19,7 @@
          <div class="form-row p-2">
             <div class="col">
               <label for="email">Email</label>
-              <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId" placeholder="user@user.com" [(ngModel)]="user.email">
+              <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId" placeholder="user@user.com" [(ngModel)]="user.email" readonly>
               <small id="emailHelpId" class="form-text text-muted">Informe o endereço de email no formato ****@***.***</small>
            
             </div>        
@@ -28,14 +28,14 @@
          <div class="form-row p-2">
            <div class="col-7">
             <label for="password">Password</label>
-              <input type="password" class="form-control" name="password" id="password" [(ngModel)]="user.password">
+              <input type="password" class="form-control" name="password" id="password" [(ngModel)]="user.password" readonly>
            </div>
          </div>
          <div class="mx-auto p-2" style="width: 200px;">
            
             
           
-          <input (click)="delete()" name="cadastrar" id="cadastrar" class="btn btn-primary "  type="button" value="Deletar"> 
+          <input (click)="delete()" name="delete" id="delete" class="btn btn-primary "  type="button" value="Deletar"> 
         </div>
       
         </div>

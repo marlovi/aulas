@@ -1,0 +1,53 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[Araujo 2015]{abntex2classe}
+\abntrefinfo{Araujo}{ARAUJO}{2015a}
+{ARAUJO, L.~C. \emph{A classe abntex2: Modelo can{\^o}nico de trabalhos
+  acad{\^e}micos brasileiros compat{\'\i}vel com as normas ABNT NBR 14724:2011,
+  ABNT NBR 6024:2012 e outras}.
+[S.l.], 2015. Dispon{\'\i}vel em: \url{http://www.abntex.net.br/}.}
+
+\bibitem[Araujo 2015]{abntex2-wiki-como-customizar}
+\abntrefinfo{Araujo}{ARAUJO}{2015b}
+{ARAUJO, L.~C. \emph{Como customizar o abnTeX2}. 2015. Wiki do abnTeX2.
+Dispon{\'\i}vel em:
+  \url{https://github.com/abntex/abntex2/wiki/ComoCustomizar}. Acesso em: 27
+  abr 2015.}
+
+\bibitem[Araujo 2015]{abntex2modelo}
+\abntrefinfo{Araujo}{ARAUJO}{2015c}
+{ARAUJO, L.~C. \emph{Modelo Can{\^o}nico de Trabalho Acad{\^e}mico com
+  abnTeX2}.
+[S.l.], 2015. Dispon{\'\i}vel em: \url{http://www.abntex.net.br/}.}
+
+\bibitem[Araujo 2015]{abntex2cite}
+\abntrefinfo{Araujo}{ARAUJO}{2015d}
+{ARAUJO, L.~C. \emph{O pacote abntex2cite: Estilos bibliogr{\'a}ficos
+  compat{\'\i}veis com a ABNT NBR 6023}.
+[S.l.], 2015. Dispon{\'\i}vel em: \url{http://www.abntex.net.br/}.}
+
+\bibitem[Araujo 2015]{abntex2cite-alf}
+\abntrefinfo{Araujo}{ARAUJO}{2015e}
+{ARAUJO, L.~C. \emph{O pacote abntex2cite: t{\'o}picos espec{\'\i}ficos da ABNT
+  NBR 10520:2002 e o estilo bibliogr{\'a}fico alfab{\'e}tico (sistema
+  autor-data)}.
+[S.l.], 2015. Dispon{\'\i}vel em: \url{http://www.abntex.net.br/}.}
+
+\bibitem[Dewey 1980]{dewey1980}
+\abntrefinfo{Dewey}{DEWEY}{1980}
+{DEWEY, J. \emph{Art as Experience}. New York, NY, USA: Perigee Books, 1980.}
+
+\bibitem[Wilson e Madsen 2010]{memoir}
+\abntrefinfo{Wilson e Madsen}{WILSON; MADSEN}{2010}
+{WILSON, P.; MADSEN, L. \emph{The Memoir Class for Configurable Typesetting -
+  User Guide}.
+Normandy Park, WA, 2010. Dispon{\'\i}vel em:
+  \url{http://mirrors.ctan.org/macros/latex/contrib/memoir/memman.pdf}. Acesso
+  em: 19 dez. 2012.}
+
+\end{thebibliography}

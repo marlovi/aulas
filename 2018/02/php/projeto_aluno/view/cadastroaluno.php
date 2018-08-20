@@ -1,4 +1,9 @@
 
+  <?php
+    require_once "../beans/aluno.class.php";
+    require_once "../persistencia/daoaluno.class.php";
+  ?>
+  
   <!DOCTYPE html>
   <html>
     <head>
@@ -12,15 +17,50 @@
     </head>
 
     <body>
-        <div class="row">
-            <div class="col s6 input-field">
-                <input type="text" name="nome" id="nome">
-                <label for="nome">Nome</label>
-            </div>
-            <div class="col s6 input-field">
-                <input type="text" name="sobrenome" id="sobrenome">
-                <label for="sobrenome">Sobre Nome</label>
-            </div>
+        <div class="row ">
+            <form class="col s12" method="POST">
+              <div class="row">
+                <div class="col s12 input-field">
+                  <input type="text" name="nome" id="nome">
+                  <label for="nome">Nome</label>
+                </div>
+               
+              </div>
+              <div class="row">
+                <div class="col s6 input-field">
+                  <input type="text" name="telefone" id="telefone">
+                  <label for="telefone">Telefone</label>
+                </div>
+                <div class="col s6 input-field">
+                  <input type="email" name="email" id="email">
+                  <label for="email">Email</label>
+                </div>                
+              </div>
+              <div class="row">
+                <div class="col s12 center">
+                  <button name="submit" class="btn waves-effect waves-light " type="submit">Enviar<i class="material-icons right">send<i/></button>
+                </div>
+              </div>
+
+              <?php
+
+                if(isset($_POST['submit'])){
+                    $aluno  = new Aluno(); //instanciando um aluno na memória do computador
+                    $aluno->setNome($_POST['nome']);
+                    $aluno->setTelefone($_POST['telefone']);
+                    $aluno->setEmail($_POST['email']);
+
+
+
+                    $dao = new DaoAluno();
+
+                    if($dao->save($aluno)){
+                      echo "<script> alert('aluno cadastrado com sucesso') </script>";
+                    }
+                }
+
+              ?>
+            </form>
         </div>
 
       <!--Import jQuery before materialize.js-->

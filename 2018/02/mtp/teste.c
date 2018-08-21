@@ -46,8 +46,7 @@ int main()
     }
     printf("\n Strings or words after split by space are :\n");
     for(i=0;i < ctr;i++){
-             printf("%d",sizeof(newString[i]));
-                // strcat(res,strrev(newString[i]));
+            
              
              
     }

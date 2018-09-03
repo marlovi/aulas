@@ -6,7 +6,7 @@ void imprimir(int*,int*);
 int menu();
 int compararCrescente(const void*, const void*);
 int compararDecrescente(const void*, const void*);
-int lerVetorInteiro(int *);
+int lerVetorInteiro(int*);
 int main(){
 
     int op;
@@ -34,46 +34,25 @@ int main(){
             } 
             break;
             case 2:{
-                int *vetor  = (int*) malloc(sizeof(int));  
-                int tamanho = lerVetorInteiro(vetor);
-                imprimir(vetor,&tamanho);
-                qsort(vetor,tamanho,sizeof(int),compararCrescente);
-                printf("--------------Crescente-------------------\n");
-                imprimir(vetor,&tamanho);
-                qsort(vetor,tamanho,sizeof(int),compararDecrescente);
-                printf("--------------Decrescente----------------\n");
-                imprimir(vetor,&tamanho);
+                int *vetor = (int*) malloc(sizeof(int)); 
+                int tamanhoVetor; 
+                tamanhoVetor = lerVetorInteiro(vetor);
+                imprimir(vetor,&tamanhoVetor);
+                 qsort(vetor,tamanhoVetor,sizeof(int),compararCrescente);
+                printf("-----------Crescente------------------------\n");
+                imprimir(vetor,&tamanhoVetor);
+                printf("-----------Decrescente----------------------\n");
+                qsort(vetor,tamanhoVetor,sizeof(int),compararDecrescente);
+                imprimir(vetor,&tamanhoVetor);
                 free(vetor);
-            } break;
+              }
+            break;
         }
     }while(op != 0 );
 
 
  return 0;
 }
-
-int lerVetorInteiro(int *vetor){
-    int tamanho= 0 ; 
-    int leitura;
-        do{
-            printf("Informe o valor do V[%d] \n",tamanho +1);
-            scanf("%d",&leitura);
-
-            if(leitura < 0) break;
-            vetor = realloc(vetor,(tamanho + 1 ) * sizeof(int));
-            vetor[tamanho] = leitura;
-            tamanho = tamanho + 1; 
-
-        }while(1);
-
-
-
-
-    return tamanho; 
-
-
-}
-
 
 int compararCrescente(const void* p1, const void* p2){
     if(*(int*)p1 == *(int*)p2) return 0;
@@ -93,7 +72,7 @@ int menu(){
     printf("---------------------MENU----------------\n");
     printf("Digite 0 para SAIR !!!!\n");
     printf("Exercício número 1  \n");
-    printf("Exercício número 2  \n");
+    printf("");
     scanf("%d",&op);
     return op;
 }
@@ -113,4 +92,20 @@ void imprimir(int *vetor,int *tamanho){
         printf("V[%d] = %d \n",i+1,vetor[i]);
         i = i+1;
     }
+}
+
+int lerVetorInteiro(int* vetor){
+    int qtd=0;
+    int leitura;
+
+    do{
+        printf("Informe o v[%d] = %dº Elemento \n",qtd+1,qtd+1);
+        scanf("%i",&leitura);
+
+        if(leitura < 0) break;
+       vetor =  (int*) realloc(vetor, (qtd + 1) * sizeof(int));
+       vetor[qtd] = leitura;
+       qtd = qtd + 1;//contador malvadão !!!! 
+    }while(leitura >= 0);
+    return qtd; 
 }

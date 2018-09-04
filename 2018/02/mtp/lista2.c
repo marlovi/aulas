@@ -66,6 +66,10 @@ int main(){
 
                     imprimirMatriz(matriz,tamanho);
 
+                   
+                    for( ; tamanho > 0 ;tamanho -- ){
+                            free(matriz[tamanho]);
+                    }
                      
 
 

@@ -1,6 +1,7 @@
 #include "stdio.h"
 #include "stdlib.h"
-
+void lerMatriz(int**,int);
+void imprimirMatriz(int**,int);
 void lerVetor(int*, int*);
 void imprimir(int*,int*);
 int menu();
@@ -47,11 +48,54 @@ int main(){
                 free(vetor);
               }
             break;
+            case 6:{
+                    int tamanho;
+                    int linha = 0;
+                    printf("Informe o tamanho da matriz \n");
+                    scanf("%d",&tamanho);
+                    
+                    int **matriz;
+                   // matriz = (int**) malloc( tamanho * sizeof(int*));
+                    matriz =  (int**) calloc(tamanho, sizeof(int)); //alocaou o espaço que possiblita representar uma matriz
+
+                    for( ; linha < tamanho; linha++)
+                        matriz[linha] = (int*) calloc(tamanho, sizeof(int)); // alocando a primeira dimensão que pode receber novos ponteiros
+
+                    printf("Informe as Distâncias entre as cidades \n");
+                    lerMatriz(matriz,tamanho);
+
+                    imprimirMatriz(matriz,tamanho);
+
+                     
+
+
+            }
+            break;
         }
     }while(op != 0 );
 
 
  return 0;
+}
+void lerMatriz(int **m,int dimensao){
+    int i=0;
+    int j=0; 
+    for( ; i< dimensao ; i++){
+        for(; j<dimensao; j++){
+            printf("Informe um elemento m[%d][%d] \n", i , j );
+            scanf("%d",&m[i][j]);
+        }
+        j = 0;
+    }
+
+}
+void imprimirMatriz(int **m,int tamanho){
+    int i=0,j=0;
+    for(; i< tamanho ;i++){
+        for(; j<tamanho;j++)
+            printf("m[%d][%d] = %d \n",i,j,m[i][j]);
+            j = 0;
+    }
 }
 
 int compararCrescente(const void* p1, const void* p2){
@@ -72,6 +116,7 @@ int menu(){
     printf("---------------------MENU----------------\n");
     printf("Digite 0 para SAIR !!!!\n");
     printf("Exercício número 1  \n");
+    printf("Exercício número 6 \n");
     printf("");
     scanf("%d",&op);
     return op;

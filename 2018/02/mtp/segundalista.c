@@ -45,6 +45,31 @@ int main(){
                 imprimir(vetor,&tamanho);
                 free(vetor);
             } break;
+            case 3: {
+                int **matriz;
+                int tamanhoPrimeiraDimensao = 4; 
+
+               // matriz = (int**) malloc(tamanhoPrimeiraDimensao * sizeof(int*));
+               matriz = (int**) calloc(tamanhoPrimeiraDimensao, sizeof(int));//vetor de ponteiros
+               matriz[0]  = (int*) calloc(tamanhoPrimeiraDimensao, sizeof(int)); 
+               matriz[1]  = (int*) calloc(tamanhoPrimeiraDimensao, sizeof(int)); 
+
+               matriz[2]  = (int*) calloc(tamanhoPrimeiraDimensao, sizeof(int)); 
+               matriz[3]  = (int*) calloc(tamanhoPrimeiraDimensao, sizeof(int)); 
+
+
+              matriz[0][0] = 50; 
+
+
+              printf("%p        %d  ",matriz[1],matriz[1][0]); 
+                //desalocar o recurso. 
+
+
+              free(matriz[3]);
+              free(matriz[2]);
+              free(matriz[1]);
+              free(matriz[0]);
+            }break;
         }
     }while(op != 0 );
 
@@ -94,6 +119,7 @@ int menu(){
     printf("Digite 0 para SAIR !!!!\n");
     printf("Exercício número 1  \n");
     printf("Exercício número 2  \n");
+    printf(" 3   Exemplo Matriz \n");
     scanf("%d",&op);
     return op;
 }

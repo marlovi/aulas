@@ -8,6 +8,7 @@ int menu();
 int compararCrescente(const void*, const void*);
 int compararDecrescente(const void*, const void*);
 int lerVetorInteiro(int*);
+int lerPosicao(int**);
 int main(){
 
     int op;
@@ -66,7 +67,18 @@ int main(){
 
                     imprimirMatriz(matriz,tamanho);
 
-                   
+                    printf("Informe as coordenadas da primeira cidade \n");
+                    int p1 = lerPosicao(matriz);
+                    printf("Informe as coordenadas da segunda cidade \n");
+                    int p2 = lerPosicao(matriz);
+
+                    int total = p1 - p2;
+                    
+                    printf("A distância é %d   \n", (total < 0)? total * (-1): total);
+
+
+
+                    tamanho = tamanho -1;
                     for( ; tamanho > 0 ;tamanho -- ){
                             free(matriz[tamanho]);
                     }
@@ -81,6 +93,19 @@ int main(){
 
  return 0;
 }
+
+int lerPosicao(int **m){
+    int i;
+    int j;
+    printf("Informe a posição da Linha \n");
+    scanf("%d",&i);
+    printf("Informe a posição da Coluna \n");
+    scanf("%d",&j);
+    return m[i][j];
+
+}
+
+
 void lerMatriz(int **m,int dimensao){
     int i=0;
     int j=0; 

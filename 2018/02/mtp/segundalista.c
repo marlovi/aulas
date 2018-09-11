@@ -1,12 +1,15 @@
 #include "stdio.h"
 #include "stdlib.h"
 
+void lerMatriz(int**, int*);
+void imprimirMatriz(int**, int*);
 void lerVetor(int*, int*);
 void imprimir(int*,int*);
 int menu();
 int compararCrescente(const void*, const void*);
 int compararDecrescente(const void*, const void*);
 int lerVetorInteiro(int *);
+int lerPosicaoMatriz(int**);
 int main(){
 
     int op;
@@ -70,11 +73,69 @@ int main(){
               free(matriz[1]);
               free(matriz[0]);
             }break;
+
+            case 6 :{
+                    int **matriz;
+                    int qtd ;
+                    int i = 0;
+                    printf("Informe a quantidade de dimensões da matriz quadrada \n");
+                    scanf("%d",&qtd);
+                    matriz = (int**) malloc( qtd * sizeof(int*));
+
+                    for( ; i< qtd ; i++){
+                        matriz[i] = (int*) malloc(qtd * sizeof(int));
+                    }
+
+
+                    lerMatriz(matriz, &qtd);
+                    imprimirMatriz(matriz,&qtd);
+
+                    int total = lerPosicaoMatriz(matriz) - lerPosicaoMatriz(matriz); 
+
+                   printf(" A Distancia entre as cidades é de  %d \n\n\n", (total < 0 )? total * -1 :total );
+                    int fim = qtd;
+                    for( fim = fim -1; fim >= 0 ; fim-- ){
+                        free(matriz[fim]);
+                    }
+
+            } break;
         }
     }while(op != 0 );
 
 
  return 0;
+}
+
+int lerPosicaoMatriz(int **m){
+    int i;
+    int j;
+
+    printf("Informe a posição da primeira dimensão da matriz [?] \n");
+    scanf("%d",&i);
+    printf("Informe a posição da segunda dimensão da matriz[%d][?] \n",i);
+    scanf("%d",&j);
+    return m[i][j];
+}
+void imprimirMatriz(int **m, int *qtd){
+     int i = 0;
+    int j = 0;
+    for( ; i< *qtd;i++){
+        for(j=0; j < *qtd;j++){
+            printf(" %d  ",m[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void lerMatriz(int **m, int *qtd){
+    int i = 0;
+    int j = 0;
+    for( ; i< *qtd;i++){
+        for(j=0; j < *qtd;j++){
+            printf("Informe o valor para a posição matriz[%d][%d] \n",i,j);
+            scanf("%d",&m[i][j]);
+        }
+    }
 }
 
 int lerVetorInteiro(int *vetor){

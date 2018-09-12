@@ -1,15 +1,19 @@
 #include "stdio.h"
 #include "stdlib.h"
+#include "time.h"
 
+void sorteio(int**,int*);
 void lerMatriz(int**, int*);
 void imprimirMatriz(int**, int*);
 void lerVetor(int*, int*);
 void imprimir(int*,int*);
+int verificaElemento(int**,int*,int*);
 int menu();
 int compararCrescente(const void*, const void*);
 int compararDecrescente(const void*, const void*);
 int lerVetorInteiro(int *);
 int lerPosicaoMatriz(int**);
+enum{FALSE,TRUE};
 int main(){
 
     int op;
@@ -99,13 +103,58 @@ int main(){
                     }
 
             } break;
+            case 7:{
+                int **matriz;
+                int tamanho;
+                int i=0;
+                int elemento;
+                printf("Informe o tamanho da matriz quadrada  tamanho * tamanho");
+                scanf("%d",&tamanho);
+
+                matriz = (int**) malloc(tamanho * sizeof(int*)); //  --------
+                                                                //  |   |  |
+                                                                //  --------
+                for( ; i< tamanho ;i++){
+                    matriz[i] = (int*) malloc(tamanho * sizeof(int));
+                }
+
+                sorteio(matriz,&tamanho);
+                printf("Informe o elemento a ser verificado na matriz \n");
+                scanf("%d",&elemento);
+
+                printf("%s \n",(verificaElemento(matriz,&tamanho,&elemento) == TRUE)?"O elemento foi encontrado  ":"O elemento não foi encontrado ");
+
+                imprimirMatriz(matriz,&tamanho);
+                int fim = tamanho;
+                    for( fim = fim -1; fim >= 0 ; fim-- ){
+                        free(matriz[fim]);
+                    }
+            }break;
         }
     }while(op != 0 );
 
 
  return 0;
 }
-
+int verificaElemento(int **matriz,int *tamanho, int *elemento){
+    int i;
+    int j;
+    for(i=0;i<*(tamanho);i++)
+        for(j=0;j<*(tamanho);j++){
+            if(matriz[i][j]==*(elemento)){
+                return TRUE;
+            }
+        }
+    return FALSE;
+}
+void sorteio(int **m,int *tamanho){
+      srand( time(NULL) );
+    int i=0;
+    int j=0;
+    for(;i<*(tamanho);i++)
+        for(j=0;j<*(tamanho);j++)
+            m[i][j] = rand() % 15;
+}
 int lerPosicaoMatriz(int **m){
     int i;
     int j;
@@ -181,6 +230,7 @@ int menu(){
     printf("Exercício número 1  \n");
     printf("Exercício número 2  \n");
     printf(" 3   Exemplo Matriz \n");
+    printf("Exercício número 7 \n");
     scanf("%d",&op);
     return op;
 }

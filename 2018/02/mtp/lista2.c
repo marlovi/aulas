@@ -9,6 +9,9 @@ int compararCrescente(const void*, const void*);
 int compararDecrescente(const void*, const void*);
 int lerVetorInteiro(int*);
 int lerPosicao(int**);
+void sorteio(int**,int*);
+int verifica(int**,int*, int*);
+enum{FALSE=0,TRUE};
 int main(){
 
     int op;
@@ -87,6 +90,32 @@ int main(){
 
             }
             break;
+            case 7: {
+               
+
+                int i=0;
+                int **matriz;
+                int tamanho; 
+                int valor;
+                printf("Informe a quantidade de dimensões da matriz quadrada \n");
+                scanf("%d",&tamanho);
+
+                matriz = (int**) malloc(tamanho * sizeof(int*));
+
+                for( ;  i < tamanho;i++)
+                    matriz[i] = (int*) malloc(tamanho * sizeof(int));
+
+                sorteio(matriz,&tamanho);
+                imprimirMatriz(matriz,tamanho);
+                printf("Informe um valor que foi sorteado !!!\n");
+                scanf("%d",&valor);
+
+                printf("%s  \n",(verifica(matriz,&tamanho,&valor)?"O Elemento sorteado está presente na matriz":"VOCÊ ERROUUUUUUU!!!!!!"));
+                
+                for(i=tamanho-1; i>=0;i--)
+                    free(matriz[i]);
+            }
+            break;
         }
     }while(op != 0 );
 
@@ -94,6 +123,26 @@ int main(){
  return 0;
 }
 
+int verifica(int **m,int *t, int *valor){
+    int i = 0;
+    int j = 0;
+    for(;i < *t ; i++)
+       for( j=0; j< *t; j++)
+         if(m[i][j] == *valor){
+             return TRUE;
+         }
+    return FALSE;
+}
+void sorteio(int **m,int *t){
+    int i = 0;
+    time_t tempo;
+    int j = 0;
+    srand((unsigned) time(&tempo));
+
+    for(;i < *t ; i++)
+       for( j=0; j< *t; j++)
+           m[i][j] = rand() % 50;
+}
 int lerPosicao(int **m){
     int i;
     int j;
@@ -146,6 +195,7 @@ int menu(){
     printf("Digite 0 para SAIR !!!!\n");
     printf("Exercício número 1  \n");
     printf("Exercício número 6 \n");
+    printf("Exercício número 7 \n");
     printf("");
     scanf("%d",&op);
     return op;

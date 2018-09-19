@@ -1,0 +1,6 @@
+<flashphoner>
+    <wcs_server>127.0.0.1</wcs_server>
+    <ws_port>32000</ws_port>
+    <video_width>1280</video_width>
+    <video_height>720</video_height>
+</flashphoner>

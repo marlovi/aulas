@@ -21,7 +21,7 @@
             return $this->nome;
         }
         public function getIdProduto(){
-            return $idProduto;
+            return $this->idProduto;
         }
     }
 ?>

@@ -29,8 +29,8 @@ class DaoCliente{
         return $resultado;
     }
 }
-
-/*$dao = new DaoCliente();
+/*
+$dao = new DaoCliente();
 
 var_dump($dao->getCliente(1));*/
 ?>

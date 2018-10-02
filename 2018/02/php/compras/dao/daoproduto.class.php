@@ -29,7 +29,7 @@
         }
     }
 
-    $dao = new DaoProduto();
+    /*$dao = new DaoProduto();
 
-    var_dump($dao->getProduto(1));
+    var_dump($dao->getProduto(1));*/
 ?>

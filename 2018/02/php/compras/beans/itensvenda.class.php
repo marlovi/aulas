@@ -10,7 +10,7 @@
             $this->venda = $venda;
         }
         public function getVenda(){
-            return $venda;
+            return $this->venda;
         }
         public function getProdutoIdProduto(){
             return $this->produtoIdProduto;

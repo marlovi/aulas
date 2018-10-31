@@ -1,24 +1,27 @@
 #include "stdio.h"
+#include "stdlib.h"
 
-/*
-int fat(int *n){
-    if(*n == 0 ) return 1;
-    else{
-        int v = *n -1;
-        return (*n) * fat( (*n -1 ) );    
-    
-    } 
-}
-*/
-int conta_tamanho(int v,int qtd){
-   v=v/10;
-    if(v > 0){
-        return 0+conta_tamanho(v,qtd +1 );
-    }else return qtd;
-}
+ 
+typedef struct {
+    char nome[200];
+    int idade;
+    float salario;
+} Funcionario;
+Funcionario func[10];
+
 
 int main(){
-    int n=12345;
-    printf("%d \n",conta_tamanho(n,1));
+    Funcionario* a = malloc( sizeof(Funcionario));
+
+    
+    printf("Informe um nome \n");
+   fgets(func[0].nome,200,stdin);
+
+   printf("Informe nome dinamico \n");
+   fgets(a->nome,200,stdin);
+
+    printf("O Nome informado foi %s ",func[0].nome);
+     printf("O Nome informado foi %s ",a->nome);
+     free(a);
     return 0;
 }

@@ -137,7 +137,7 @@ int main(){
  return 0;
 }
 int verificaElemento(int **matriz,int *tamanho, int *elemento){
-    int i;
+    int i;++++++
     int j;
     for(i=0;i<*(tamanho);i++)
         for(j=0;j<*(tamanho);j++){

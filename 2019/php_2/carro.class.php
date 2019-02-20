@@ -17,5 +17,18 @@
         public function isFlex(){
             return $this->flex;
         }
+        public function __construct(){
+            echo "Inicializando a classe CARRO <br><br>";
+        }
     }
+    $fusca  = new Carro();
+    var_dump($fusca);
+    echo "<br><br>";
+    $fusca->setCor("Preta");
+   // $fusca->setProprietario("Marlus Dias Silva");
+
+ 
+    var_dump($fusca);
+    echo "<br><br>";
+    $uno = new Carro();
 ?>

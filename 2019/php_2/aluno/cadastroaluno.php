@@ -1,3 +1,7 @@
+<?php 
+    require_once "aluno.class.php";
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -60,7 +64,11 @@
 
                 if(isset($_POST['enviar'])){
 
-                   // echo "<script> alert('objeto enviar criado'); </script>";
+                  //Como instanciar um obj em php
+                  $aluno  = new Aluno(); 
+                  $aluno->setNome($_POST["nome"]);
+                  $aluno->setRg($_POST["rg"]);
+                  var_dump($aluno);
                 }
                 ?>
             </div>

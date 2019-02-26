@@ -10,6 +10,8 @@ class Veiculo{
        int ano;
        bool flex;
        void imprimir();
+  Veiculo(string marca); // método construtor da classe
+  ~Veiculo(); // método destrutor da classe 
 };
 
 #endif

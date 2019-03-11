@@ -5,12 +5,19 @@
 
 using namespace std;
 class Veiculo{
+    private:
+      string marca;
+      int ano;
+      bool flex;
     public:
-       string marca; 
-       int ano;
-       bool flex;
+      bool isFlex();//éFlex ou não é flex
+      string getMarca();  
+      int getAno();
+      void setAno(const int &); 
+      void setFlex(const bool &);
+      void setMarca(const string &);   
        void imprimir();
-  Veiculo(string marca); // método construtor da classe
+  Veiculo(); // método construtor da classe
   ~Veiculo(); // método destrutor da classe 
 };
 

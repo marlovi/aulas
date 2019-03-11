@@ -3,7 +3,7 @@
 
 using namespace std;
 int main(int argc,char** argv){
-
+/*
     Veiculo *uno;
     vector<Veiculo*> vetor;
 
@@ -24,7 +24,7 @@ int main(int argc,char** argv){
     cout << "Imprimindo objetos do vector "<<endl;
 	 for(vector<Veiculo*>::iterator it = vetor.begin() ;            it != vetor.end(); it++) {
 	   (*it)->imprimir();
-      }
+    }
 
 	 vetor.pop_back();
 
@@ -55,5 +55,11 @@ int main(int argc,char** argv){
     gol->imprimir();
     uno->marca = "Nacional";
     uno->imprimir();*/
+
+
+    Veiculo* encapsulado  = new Veiculo();
+    encapsulado->setMarca("Técnica de programação OO");
+
+    cout << encapsulado->getMarca()<< endl;
     return 0;
 }

@@ -16,7 +16,7 @@ class Veiculo{
       void setAno(const int &); 
       void setFlex(const bool &);
       void setMarca(const string &);   
-       void imprimir();
+      void imprimir();
   Veiculo(); // método construtor da classe
   ~Veiculo(); // método destrutor da classe 
 };

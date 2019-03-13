@@ -1,5 +1,7 @@
 #include "veiculo.h"
 #include <vector>
+#include "leitura.h"
+#include "logica.h"
 
 using namespace std;
 int main(int argc,char** argv){
@@ -57,9 +59,27 @@ int main(int argc,char** argv){
     uno->imprimir();*/
 
 
-    Veiculo* encapsulado  = new Veiculo();
+  /*  Veiculo* encapsulado  = new Veiculo();
     encapsulado->setMarca("Técnica de programação OO");
 
-    cout << encapsulado->getMarca()<< endl;
+    cout << encapsulado->getMarca()<< endl;*/
+
+
+/*
+    Veiculo* v = new Veiculo(); // obj do tipo veículo
+    Leitura* leitura = new Leitura();
+     
+
+
+    cout << "Informe o ano do veiculo " << endl;
+    v->setAno(leitura->getInt());
+
+    cout << "O ano informado foi   "<< v->getAno()  << endl;
+
+
+
+*/
+  Logica* l = new Logica();
+  l->iniciar();
     return 0;
 }

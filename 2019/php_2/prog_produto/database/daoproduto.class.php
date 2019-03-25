@@ -3,6 +3,39 @@
     require_once ("conexao.class.php");
     class DaoProduto{
 
+        public function getAll() {//obter todos os registros de produtos
+            $retorno  = NULL;
+            $sql = "SELECT id, nome, descricao, codigo_barras, preco_compra, preco_venda, data_validade, ativo, perecivel, qnt_estoque FROM produto"; 
+            $conexao  = new Conexao();
+            $con = $conexao->getConnection();
+
+            $result  = $con->query($sql);
+            
+
+            if($result->num_rows > 0 ){
+                $retorno = array();
+                while($linha = $result->fetch_assoc()){
+                    $p = new Produto();
+                    $p->setId($linha['id']);
+                    $p->setNome($linha['nome']);
+                    $p->setCodigo($linha['codigo_barras']);
+                    $p->setPrecoCompra($linha['preco_compra']);
+                    $p->setPrecoVenda($linha['preco_venda']);
+                    $p->setDataValidade($linha['data_validade']);
+                    $p->setAtivo($linha['ativo']);
+                    $p->setPerecivel($linha['perecivel']);
+                    $p->setEstoque($linha['qnt_estoque']);
+                   
+
+                    array_push($retorno,$p);
+                }
+            }
+
+           // print_r($retorno);
+           return $retorno;
+        }
+
+
         public function salvar($produto){
            $sql ="INSERT INTO produto (nome, descricao, 
                  codigo_barras, preco_compra, preco_venda, 
@@ -52,6 +85,9 @@
    // var_dump($produto);
 
    $dao = new DaoProduto();
-   $dao->salvar($produto);*/
+   $dao->salvar($produto);
+
+   $dao = new DaoProduto();
+   $dao->getAll();*/
 
 ?>

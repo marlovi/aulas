@@ -1,6 +1,12 @@
 #include "aluno.h"
 
+Aluno::Aluno(){
+       //aqui hahahha sem parâmetros :) 
+}
 
+Aluno::Aluno(const string &nome){
+    this->nome = nome;
+}
 void Aluno::setNome(const string &nome){
     this->nome = nome;
 }

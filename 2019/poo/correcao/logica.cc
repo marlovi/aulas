@@ -36,11 +36,26 @@ int Logica::menu(){
 Aluno* Logica::criarAluno(){
     Leitura* l = new Leitura();
     Aluno* aluno; 
-    aluno  = new Aluno();
 
-    cout << "Informe o nome "<< endl;
+
+    cout << "0 para informar o nome 1 para não informar o nome " << endl;
+    int o = l->getInt(); 
+
+    if(o == 1) aluno = new Aluno();
+    else{
+        string n; 
+        cout << "Informe o nome "<< endl;
+        cin.ignore();
+        getline(cin,n);
+        aluno = new Aluno(n);
+    }
+
+
+
+    //aluno  = new Aluno();
+
     cin.ignore();
-    aluno->setNome(l->getString());
+    
     cout << "Informe o RG" << endl;
     aluno->setRg(l->getString());
     cout << "Informe o CPF"<<endl;

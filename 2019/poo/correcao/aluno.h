@@ -15,6 +15,8 @@ class Aluno{
         long int matricula;
         string telefone;
     public:
+        Aluno(); 
+        Aluno(const string &);
         string getTelefone();
         void setTelefone(const string &);
         string getNome();

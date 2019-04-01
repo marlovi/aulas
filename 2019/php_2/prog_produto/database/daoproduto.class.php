@@ -3,6 +3,22 @@
     require_once ("conexao.class.php");
     class DaoProduto{
 
+
+
+
+public function update($produto){
+    $sql = "UPDATE `produto` SET `nome`= '{$produto->getNome()}',`descricao`='{$produto->getDescricao()}',`codigo_barras`='{$produto->getCodigo()}',`preco_compra`={$produto->getPrecoCompra()},`preco_venda`={$produto->getPrecoVenda()},`data_validade`='{$produto->getDataValidade()}',`ativo`={$produto->isAtivo()},`perecivel`={$produto->isPerecivel()},`qnt_estoque`={$produto->getEstoque()} WHERE id = ".$produto->getId();
+    $conexao  = new Conexao();
+    $con = $conexao->getConnection();
+   
+    $result  = $con->query($sql);
+
+    if($result == FALSE) echo "erro   {$con->error} ";
+    $con->close();
+    return $result;
+}
+
+
         public function getProduto($id){
             $retorno  = NULL;
             $sql = "SELECT id, nome, descricao, codigo_barras, preco_compra, preco_venda, data_validade, ativo, perecivel, qnt_estoque FROM produto WHERE id = ".$id; 

@@ -15,14 +15,14 @@ $produto = NULL;
         $dao = new DaoProduto();
         $produto  = $dao->getProduto($_GET['id']);
     }
-    var_dump($produto);
+    
 
 ?>
 
 
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
  
   <head>
     <!-- Required meta tags -->
@@ -96,7 +96,7 @@ $produto = NULL;
                                 <input value="<?php  echo $produto->getDescricao(); ?>"class="form-control" type="text" id="descricao" name="descricao" placeholder="informe a descrição do produto">             
                             </div>
                         <p class="text-center">  
-                            <button type="submit" name="enviar" class="btn btn-outline-primary">Cadastra Produto</button>
+                            <button type="submit" name="enviar" class="btn btn-outline-primary">Atualizar Produto</button>
                         </p>
                     </div>
 
@@ -106,20 +106,22 @@ $produto = NULL;
                 <?php
                 if(isset($_POST['enviar'])){
                     //como instarciar um objeto em php
-                    $produto = new Produto();
+                    
                     $produto->setNome($_POST["nome"]);
                     $produto->setCodigo($_POST["codigo"]);
                     $produto->setEstoque($_POST["estoque"]);
                     $produto->setPrecoVenda($_POST["preco_venda"]);
                     $produto->setPrecoCompra($_POST["preco_compra"]);
-                    $produto->setPerecivel($_POST["perecivel"]);
+                    $produto->setPerecivel((($_POST["perecivel"]=="on")?1:0));
                     $produto->setDataValidade($_POST["data"]);
-                    $produto->setAtivo($_POST["ativo"]);
+                    $produto->setAtivo((($_POST["ativo"] =="sim")?1:0));
                     $produto->setDescricao($_POST["descricao"]);
+                  
                     
                     $dao = new DaoProduto();
-                    if($dao->salvar($produto)>0){
-                        echo "<script> alert('produto cadastrado com sucesso ')</script>";
+                    if($dao->update($produto)==TRUE){
+                        echo "<script> alert('produto atualizado com sucesso ')</script>";
+                        echo "<script> window.location.href='consultatodosprodutos.php'</script> ";
                     }
                 }
                 ?>

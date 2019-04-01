@@ -1,0 +1,21 @@
+#ifndef VEICULO_H
+#define VEICULO_H
+
+
+#include <iostream>
+
+
+using namespace std;
+
+
+class Veiculo{
+ private:
+ public:
+  Veiculo();
+ protected:
+  string chassi;
+};
+
+
+
+#endif

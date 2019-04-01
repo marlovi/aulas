@@ -1,0 +1,6 @@
+#include "veiculo.h"
+
+
+Veiculo::Veiculo(){
+  cout <<" Veiculo Instânciado " << endl;  
+}

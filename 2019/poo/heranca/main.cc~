@@ -1,0 +1,10 @@
+#include "veiculo.h"
+#include "moto.h"
+
+
+int main(){
+  Moto* m = new Moto();
+
+  
+  return 0;
+}

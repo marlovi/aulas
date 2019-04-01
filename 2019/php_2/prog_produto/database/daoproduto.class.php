@@ -3,6 +3,38 @@
     require_once ("conexao.class.php");
     class DaoProduto{
 
+        public function getProduto($id){
+            $retorno  = NULL;
+            $sql = "SELECT id, nome, descricao, codigo_barras, preco_compra, preco_venda, data_validade, ativo, perecivel, qnt_estoque FROM produto WHERE id = ".$id; 
+            $conexao  = new Conexao();
+            $con = $conexao->getConnection();
+
+            $result  = $con->query($sql);
+            
+
+            if($result->num_rows > 0 ){
+               
+                while($linha = $result->fetch_assoc()){
+                    $p = new Produto();
+                    $p->setId($linha['id']);
+                    $p->setNome($linha['nome']);
+                    $p->setCodigo($linha['codigo_barras']);
+                    $p->setPrecoCompra($linha['preco_compra']);
+                    $p->setPrecoVenda($linha['preco_venda']);
+                    $p->setDataValidade($linha['data_validade']);
+                    $p->setAtivo($linha['ativo']);
+                    $p->setPerecivel($linha['perecivel']);
+                    $p->setEstoque($linha['qnt_estoque']);
+                    $p->setDescricao($linha['descricao']);
+                   
+
+                    $retorno = $p;
+                }
+            }
+
+           return $retorno;
+        }
+
         public function getAll() {//obter todos os registros de produtos
             $retorno  = NULL;
             $sql = "SELECT id, nome, descricao, codigo_barras, preco_compra, preco_venda, data_validade, ativo, perecivel, qnt_estoque FROM produto"; 
@@ -25,6 +57,7 @@
                     $p->setAtivo($linha['ativo']);
                     $p->setPerecivel($linha['perecivel']);
                     $p->setEstoque($linha['qnt_estoque']);
+                    $p->setDescricao($linha['descricao']);
                    
 
                     array_push($retorno,$p);

@@ -3,7 +3,19 @@
     require_once ("conexao.class.php");
     class DaoProduto{
 
+public function delete($produto){
+    $sql = "DELETE FROM produto WHERE id =".$produto->getId(); 
+    $resultado = FALSE; 
+    $conexao = new Conexao();
+    $con  = $conexao->getConnection();
 
+    if($con->query($sql) == TRUE){
+        $resultado = TRUE;
+    }else{
+        die("erro  ".$con->error);
+    }
+    return $resultado;
+}
 
 
 public function update($produto){

@@ -1,0 +1,28 @@
+{
+  "name": "exemploServidor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "compilerOptions": {
+    "lib": ["es6", "es2016"]
+ }
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mongoose": "^5.3.25",
+    "@types/restify": "^7.2.9",
+    "@types/restify-cors-middleware": "^1.0.1",
+    "mongoose": "^5.5.0",
+    "restify": "^8.2.0",
+    "restify-cors-middleware": "^1.1.1",
+    "typescript": "^3.4.3"
+  }
+
+}
+
+
+

@@ -14,6 +14,7 @@ class Leitura{
         string getString();
         char getChar();
         long int getLongInt();
+        long double getLongDouble();
     
 };
 

@@ -25,8 +25,9 @@ class Game{
         long double  getValor();
         void  setDataLancamento(const string &);
         string getDataLancamento();
-        void imprimir(); 
+        virtual void imprimir(); 
 
+      
         //gets sets para os atributos, encapsulamento; 
 };
 

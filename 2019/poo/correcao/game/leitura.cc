@@ -11,6 +11,11 @@ float Leitura::getFloat(){
     cin >> valor;
     return valor;
 }
+long double Leitura::getLongDouble(){
+    long double x;
+    cin >> x;
+    return x;
+}
 string Leitura::getString(){
     string linha;
     getline( cin , linha); //2 parametros 1 de onde vem o fluxo

@@ -6,7 +6,8 @@ export const handleError  = (req : restify.Request, resp: restify.Response, err:
 
     err.toJSON = () =>{
         return {
-            message :err.message
+            message :err.message,
+            troll:"Rodou :("
         }
     }
     done()

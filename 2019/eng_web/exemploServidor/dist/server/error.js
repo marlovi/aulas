@@ -4,7 +4,8 @@ exports.handleError = (req, resp, err, done) => {
     console.log(err);
     err.toJSON = () => {
         return {
-            message: err.message
+            message: err.message,
+            troll: "Rodou :("
         };
     };
     done();

@@ -1,0 +1,3 @@
+Classe: E uma representação de um objeto podendo possuir atributos e metodos,representando suas caracteristicas e ações respectivamente
+Objeto: E a instancização de uma classe, ou seja a utilização da classe em uma aplicação
+Encapsulamento: E a utilização de metodos "Set", "Get", ou "Is", para alterar ou obter os atributos de uma classe

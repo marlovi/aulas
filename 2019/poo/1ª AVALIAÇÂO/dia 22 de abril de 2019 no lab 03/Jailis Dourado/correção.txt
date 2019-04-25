@@ -1,0 +1,22 @@
+
+1. A codificação do arquivo .h está totalmente errada, pois em arquivos do tipo .h é definido as classes, e nos arquivos .cc são definidas as lógicas de programações necessárias. 
+   Os métodos nos arquivos .cc devem vir acompanhados pelos operadores de acesso de classe que no caso é o nome da própria classe.   Exemplo a classe Cliente, o correto seria  void Cliente::setNome(....)
+   Não foi resolvido o exercício.
+   A classe que foi codificada está incorreta na integra. 
+   SuperJogador seria uma outra classe, subclasse de jogador. 
+   
+   nota no item 0,2 
+
+
+
+
+
+2. Não definiu classe, apenas fez uma analogia. 
+   Definição de objeto está correta. 
+   Definição de Encapsulamento correta. 
+   Erros de português nas palavras (existerem, manuenção, jogardor, consqüentemente) 
+
+   nota no item 0,7
+
+
+   nota da avaliação 0,9

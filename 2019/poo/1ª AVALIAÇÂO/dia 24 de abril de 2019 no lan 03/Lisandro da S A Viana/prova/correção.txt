@@ -1,0 +1,16 @@
+1)A Modelagem da classe jogador, está correta em parte, não desenvolveu-se o método para utilizar a fórmula que o exercício solicitou. 
+Não codificou-se a classe super jogador, mesmo se aplica a lógica de programação do exercício. 
+
+nota no item 0,2
+
+2) Coreto em parte;	
+
+valor no item 0,25 
+
+3) Correto em parte: 
+
+valor no item 0,25
+
+
+total da nota 0,7 
+

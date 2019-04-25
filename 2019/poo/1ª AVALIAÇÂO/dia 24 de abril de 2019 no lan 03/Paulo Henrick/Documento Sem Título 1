@@ -1,0 +1,3 @@
+2)Funções do tipo template, possibilitam ao programador trabalhar com todas as suas funçoes em um unico arquivo.
+
+3)Polimorfismo é um recurso que possibilita o programador fazer com que tenha mais de uma função em seu código com o mesmo nome, mas para isso os parâmetros desta função devem ser diferentes.

@@ -1,0 +1,19 @@
+1) O correto seria criar um arquivo chamado jogador.h jogador.cc superjogador.h e superjogador.cc, a forma de desenvolvimento adicionando em um único arquivo, as definições de classe não está padronizado, apesar de compilar. 
+	Porém no arquivo jogador.cc, você não desenvolveu os métodos necessário para jogador e também super jogador, não resolvendo o que o exercício solicitou. 
+	Mesma situação pode-se ser observada no arquivo logica.h e logica.cc. 
+
+	desta forma, a avaliação no item foi de 0,5
+
+
+2) Classe não é um método, classe é um modelo ! (60% correto)
+   Objeto é uma instanciação de uma classe na memória do computador. item errado ! 
+   Encapsulamento é uma técnica de programação, que viabiliza que as características de uma classe não sejam acessada pelo mundo externo, desta forma, utiliza-se os métodos get; set e is, para realizar a manipulação dos atributos; 
+
+
+   O Exemplo de modelagem da classe está correto. 
+
+
+   nota no item 0,5 
+
+
+   total de pontos na avaliação 1,0

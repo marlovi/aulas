@@ -1,0 +1,1 @@
+﻿	Porlomorfismo é uma tecnica de programação de Poo (Paradigmas de orientada a objetos) que utiliza a tranformação de classes onde é possivel que o usuario adicione caracteriticas a classe.Ela é utilizada para reaproveitamento de codigo assim aumentando a sua eficienfia.

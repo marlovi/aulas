@@ -6,8 +6,7 @@
 
 typedef struct No{
     int valor;
-    struct No* proximo;
-    
+    struct No* proximo;    
 }lista;
 //lista -> 
 //[ponteiro]-> plistaroximo [novoNO]->proximo   [NOVONO]->proximo   []    []   []   -> NULL  
@@ -29,8 +28,7 @@ int main(){
     no->proximo = no1;
     //raiz->proximo = no1;
 
-
-
+   
 
 
 

@@ -1,0 +1,4 @@
+Questão 2) Funções templetes são funções que não possuem tipo de dado ja determinado, esse tipo de dado passa a ser determiando quando o valor é atribuido a variavel. Ela pode/deve ser utilizada em casos em que não se sabe que tive de valor ou dado o usuario necessita ou ira informar. A sua utilização torna-se relevante quando ja se sabe o tipo de dado que se deve atribuir e que valor ou dado o usuario ira ou deve informa.
+
+Questão 3) Polimorfismo permite que referência de tipos de classes mais abstratas representem comportamento de classes mais concretas que referenciam. Assim é possível tratar vários objetos de maneira homogênea.
+Tal tecnica pode ser utilizada quando se possue superClasses e subClasses onde as subClasses herdam caracteristicas da superClasse.

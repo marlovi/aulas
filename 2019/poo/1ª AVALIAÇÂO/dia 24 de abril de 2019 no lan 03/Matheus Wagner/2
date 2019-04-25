@@ -1,0 +1,34 @@
+RESPOSTA: São funções que podem receber quaisquer tipos de variáveis. Quando o comportamento da função for aceitável para tipos diferentes de dados. No reaproveitamento 
+de código, já que é possível trabalhar com vários tipos de dados utilizando funções templates, e ao utilizá-las, não será necessário reescrever o código para trabalhar com tipos de dados distintos. 
+
+Exemplo: 
+
+Implementação de função template em C++ que realiza a troca do valor de quaisquer variáveis:
+
+#include <iostream>
+
+using namespace std;
+
+template<typename X, typename Y> void troca(X *a, Y *b){ //Função template que recebe dois tipos quaisquer.
+    X aux;
+    aux = *a;
+    *a = *b;
+    *b = aux;
+}
+
+
+int main(int argc, char** argv){
+
+    int a=1, b=2;
+    char p1= 'a', p2 = 'b';
+
+    troca(&a, &b); //Função realizando a troca de variáveis do tipo int.
+
+    troca(&p1, &p2); //Função realizando a troca de variáveis do tipo char.
+
+    cout << a << endl << b << endl;
+    cout << p1 << endl << p2 << endl;
+
+    return 0;
+
+}

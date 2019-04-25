@@ -1,0 +1,13 @@
+1. Não implementou o construtor de jogador no .cc
+   Não implementou o construtor de superjogador, passando como parâmetro o nome do jogador
+   Implementação na Main não chega ao resultado que o exercício solicita. 
+	total da questão: 1,5
+
+2. Definição de classe    (OK)
+   Definição de objeto    ( 40% ok) 
+   Definição de encapsulamento ( OK) 
+   Total na questão 0,6 
+
+
+
+  nota total 2,1

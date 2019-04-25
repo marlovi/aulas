@@ -1,0 +1,28 @@
+
+RESPOSTA: O polimorfismo é uma técnica que permite ter dois métodos com mesmo nome em um mesmo bloco, fazendo a diferenciação dos mesmos pela análise da assinatura (quantidade e tipo de parâmetros) em tempo de execução, invocando o método correspondente. Pode ser aplicado quando se deseja escrever dois métodos com mesmo nome, mas que recebem quantidades e/ou tipos de parâmetros distintas. 
+
+
+EXEMPLO:
+
+
+#include <iostream>
+
+using namespace std;
+
+int soma(int a, int b){ 
+    return a+b;
+}
+
+float soma(float a, int b){ //Sobrecarga
+    return a+b;
+}
+
+
+int main(int argc, char** argv){
+
+    cout << soma((float)2.4, 3) << endl; //Invocando a segunda função de soma
+
+    cout << soma(4, 5) << endl; //Invocando a primeira função de soma
+
+    return 0;
+}

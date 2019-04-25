@@ -1,0 +1,2 @@
+Polimorfismo é a qualidade de uma classe em se comportar de diversas formas dependendo do contexto em que foi utilizada. O polimorfismo pode
+ser aplicado quando se deseja utilizar a sobreposição de metodos ou a superposição de métodos;

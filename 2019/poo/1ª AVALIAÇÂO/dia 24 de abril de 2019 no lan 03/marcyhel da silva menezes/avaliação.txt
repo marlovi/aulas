@@ -1,0 +1,18 @@
+1) O Exercício solicitava o desenvolvimento de uma classe chamada jogador, e de um construtor que passe como parâmetro o nome do jogador, porém foi desenvolvida uma classe chamada time. 
+	na Classe supracitada, não desenvolveu-se o método solicitado que utilizava a formula disponibilizada na questão.
+
+	A classe super que deveria chamar super jogador, não foi implementado a sobrescrita do método que possuía a formula disponibilizada na questão. 
+
+	Na lógica foi passada a formula como parâmetro para o método, o que não faz sentido pois o exercício foi categórico em qual método deveria ser desenvolvido a formula. 
+
+
+
+	total no item 1,3 
+	 
+2) item não localizado 
+	nota no item 0
+3) Resposta 80 % correta
+	nota no item 0,4
+
+
+ total na avaliação 1,7 

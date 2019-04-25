@@ -1,0 +1,33 @@
+Classe é um modelo de representação onde se abstrai caracteristicas e ações de determinado objeto.
+Exemplo de classe:
+class Veiculo{
+    private:
+        string nome;        \\caracteristicas
+        string sexo;
+        string altura;
+    public:
+        Aluno();        \\ações
+        void imprimir();
+};
+
+
+Objeto é uma representação de uma classe onde são atribuidas todas as caracteristicas e ações. 
+
+Encapsulamento é um principio cujo principal função é proteger as caracteristicas e ações de uma classe, tal função realizada pelos métodos setters,getters
+onde setters é a inclusão, e getters a informação.
+
+Exemplo:
+class Veiculo{
+    private:
+        string nome;        
+        string sexo;  \\Informação privada da classe 
+        string altura;
+    public:
+        void setNome(const string &nome){   \\Encapsulamento e inclusão dos metodos de inclusão e obtenção.
+            this->nome = nome;     
+        }
+        string getNome(){
+            return this->nome;
+        };
+        
+};

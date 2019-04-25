@@ -1,0 +1,22 @@
+Respostas das questões 2 e 3:
+
+2) Funções do tipo template são basicamente funções genéricas, ou seja, uma mesma função pode ser acessada e usada várias vezes em diferentes casos.
+Podemos ou devemos utilizar funções do tipo template quando sabemos que aquela parte do código já temos pronta em outro local e podemos 'aproveitar'
+ela completamente.
+
+Um contexto onde é muito relevante a utilização de funções do tipo template é quando, por exemplo, você tem uma superclasse Jogo e n subclasses,
+porém determinada função não é herdada para as subclasses da superclasse e todas as subclasses necessitam da mesma função. Você cria essa função do tipo
+template pois será usada para as n superclasses e chama ela para determinado caso, 'reutilizando' o seu código já pronto e ganhando tempo.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3) Polimorfismo é quando você tem várias funções com o mesmo nome, porém com parâmetros diferentes.
+Você pode aplicar essa técnica quando se é necessário realizar uma mesma operação mais de uma vez.
+
+Exemplo: em primeiro momento, necessito realizar a soma de dois valores do tipo de dado inteiro. Posso criar uma função de soma, que recebe como 
+parâmetro dois valores inteiros e que me retorna um valor do tipo inteiro.
+
+Em segundo caso, novamente preciso realizar uma soma, mas de um valor do tipo inteiro com um valor do tipo flutuante e que essa soma me retorne um valor
+do tipo flutuante. Posso criar uma função com o mesmo nome, porém mudando o tipo do retorno para o desejado, e passando os parâmetros desejados.
+
+Com isso tenho duas funções com o mesmo nome e que realizam a mesma operação, porém recebem como parâmetro dados distintos e têm retornos diferentes.

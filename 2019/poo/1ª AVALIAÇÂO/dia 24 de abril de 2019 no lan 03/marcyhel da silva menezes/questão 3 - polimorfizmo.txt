@@ -1,0 +1,43 @@
+polimorfizmo é uma tecnica de sobrecarga
+podendo utilizar o mesmo nome em varias funçoes 
+pois o que importa é a sua identidade que é criada de acordo 
+com os tipos a quantidade e a ordem dos parametros
+
+
+Ex:
+
+soma(float x , float y);
+soma(int x , float y);
+soma(int x , int y);
+soma(int x , int y , int z);
+
+int main(int argc, char ** argv){
+
+    soma (2,3);   ----------  //por ser passado dois parametros inteiros ele ira chamar a função que possui os mesmos tipos de paramentros 
+
+    soma(3 + 5.5 );  ----- // ele ira chamar a função que possui parametros int e float, se possuice outra função com os mesmos tipos de parametros ele iria verificar tbm a ordem deles
+
+    soma (5,3,8); ----// chamara a função que possui por paametro tres inteiros
+
+
+
+
+    return 0;
+}
+
+
+soma (float x , float y){
+        return x + y; 
+    }
+
+soma (int x , float y){
+    return x + y; 
+}
+
+soma (int x , int y){
+    return x + y; 
+}
+
+soma (int x , int y , int z){
+    return x + y + z; 
+}

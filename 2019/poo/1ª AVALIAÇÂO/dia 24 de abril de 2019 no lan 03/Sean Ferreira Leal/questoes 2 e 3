@@ -1,0 +1,9 @@
+(2)
+	Funções do tipo TEMPLATES, são funções que permitem a verificação do dado que está sendo trabalhado. Desta maneira, possibilitando a reutilização do código, assim, em tempo de execução é póssivel reconhecer o dado inserido e seguir com a execução correta para o determinado tipo de dado.
+
+
+(3)
+	Polimorfismo é uma técnica de programação utilizada para a reutilização de códigos, pois possibilita a utilização de funções com o mesmo nome, porém, com a implementação diferente.
+	Dentro do polimorfismo existem algumas técnicas, por exemplo, a sobreescrita e sobrecarga.
+	A sobrecarga é aplicada para utilizar funções com o mesmo nome, porém com assinaturas distintas. Desta forma, o programador utiliza funções nomeadas da mesma maneira, porém, com os parâmetros destas funções diferentes.
+	A sobreescrita é aplicada, principalmente, quando ocorre herança. A sobreescrita é aplicada quando o programador deseja recodificar um método herdado de uma superclasse, podendo assim, utilizar do mesmo nome do metodo e reecodifica-lo em sua subclasse.

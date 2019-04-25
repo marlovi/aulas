@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+
+    Teste de obj será que vai {{obj | json }}
+  </h1>
+</div>
+<table>
+  <thead>
+    <th>Nome</th>
+    <th>Telefone</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pessoa of obj">
+      <td>{{pessoa.nome}}</td>
+      <td>{{pessoa.telefone}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<router-outlet></router-outlet>

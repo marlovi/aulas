@@ -1,0 +1,17 @@
+
+1) Classe jogador atendendo todos os requisitos que o exercício solicitou. 
+   Classe super jogador está incorreta, faltou implementar corretamente o mecanismo de herança no método construtor, e também sobrescrever o método getEficiencia. 
+   na main não está armazenando 3 jogadores da equipe A e B em vetores distintos do tipo vector, consequentemente, a lógica de programação que o exercício solicitou não está coerente ao código desenvolvido. 
+
+   total no item 1,7 
+
+2) Definição de classe e exemplo coerente
+
+   Definição de objeto e exemplo coerente 
+   Definição de encapsulamento coerente 
+   erro de português na palavra classe
+
+	total no item 1,0
+
+
+	total na avaliação 2,7 

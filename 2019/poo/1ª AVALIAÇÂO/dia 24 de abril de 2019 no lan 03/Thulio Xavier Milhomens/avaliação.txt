@@ -1,0 +1,11 @@
+1) Não criou o construtor passando como parâmetro o nome
+ Não atribuiu ao método a formula solicitada
+ Não criou a classe super jogador
+ não desenvolveu a lógica de programação
+
+ valor no item 0,2 
+
+2) errada
+	valor no item 0
+3) não feita
+	valor no item 0

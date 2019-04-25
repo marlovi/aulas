@@ -1,0 +1,8 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Questão 02- 
+
+Classe-  é um metodo utilizado para instanciar e definir parâmetros de um objeto,deve ser utilizada quando for necessesário modelar um objeto. 
+
+Objeto- Objeto é o modelo utilizado para receber comandos que agem diretamente ao objeto, tornadno possivel a criação de aplicações.
+
+encapsulamento- método usado para instanciar os comandos da classe, facilitando o uso de variaveis publicas no implementação do codigo.

@@ -1,0 +1,16 @@
+ Não desenvolveu o construtor na classe Jogador conforme exercício solicitou, que passa-se o nome como parâmetro
+ Não codificou-se o método para calcular a formula na classe jogador
+ Não codificou-se o construtor da forma correta na classe super jogador, também não realizou-se a sobrescrita de método solicitada. 
+ Quanto a lógica de programação não realiza o que o enunciado solicitou. 
+
+ total no item 0,8
+
+
+2) Correto
+	total no item 0,5 
+
+3) Somente 10% da resposta está correta 
+	total no item 0,1  
+
+
+	total na avaliação  1,4 

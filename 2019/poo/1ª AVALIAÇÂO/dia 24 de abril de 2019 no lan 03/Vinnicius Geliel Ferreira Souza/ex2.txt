@@ -1,0 +1,2 @@
+﻿	As funções de templates são como se fossem bibliotecas que são criadas nos codigos para facilitar a execução do codigo exemplo Leitura de string.
+A maior parte das vezes são utilizadas em algoritmos longos ou com um nivel de complexidade maior.

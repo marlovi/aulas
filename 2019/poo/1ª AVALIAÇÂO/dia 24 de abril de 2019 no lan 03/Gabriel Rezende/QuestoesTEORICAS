@@ -1,0 +1,4 @@
+Questão 2) Templates: Permite a criação de códigos que já foram utilizados.
+É possível criar funções e classes genéricas fazendo com que o tipo de dado usado seja um parâmetro. Exemplo: Dá pra criar um template para somar, depois enviar o tipo de  dado vai ser somado.
+
+Questão 3) Polimorfismo: Capacidade dos objetos se comportarem de outra forma em um ambiente diferente. O mesmo objeto podendo ser utilzado em outra classe fazendo as mesmas coisas.

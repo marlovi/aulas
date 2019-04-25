@@ -1,0 +1,4 @@
+2- são classes genericas ou funções genericas, que podem ser utilizadas em vários tipos de classes, uma classe de SOMA define ela com TYPENAME somando duas variaveis A e B, definida, ela não precisara mais ser definida para outra classe que desejará utiliza-lá.
+
+3-Polimorfismo são metodos de mesmo nome mais parametros diferentes. Aplicada quando se tem uma função que busca executar varios tipos de dados primitivos. Uma função de SOMA que recebe um parametro int A, outra função de SOMA mais com dois parametros, Int e Double. 
+

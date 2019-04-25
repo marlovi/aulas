@@ -1,0 +1,16 @@
+1) Na classe jogador faltou o construtor conforme enunciado e faltou a aplicação da formula 
+   na classe super jogador, faltou o construtor e a sobrescrita do método do enunciado.
+    Apesar de na lógica forçar a solução da questão, não foi assim que o enunciado solicitou. 
+
+valor no item 1,5 
+
+
+
+2) 80 % correta
+	valor no item 0,4
+3) Definição errada, exemplo correto. 
+	valor no item 0,2 
+
+
+
+total 2,1

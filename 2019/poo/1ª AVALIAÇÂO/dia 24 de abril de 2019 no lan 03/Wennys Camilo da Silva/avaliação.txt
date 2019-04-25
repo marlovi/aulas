@@ -1,0 +1,13 @@
+1) Na classe jogador faltou o construtor conforme enunciado, e aplicação correta da formula
+   Na classe super jogador faltou a sobrescrita do método solicitado no enunciado 
+   Não implementou lógica de programação para solucionar a questão
+
+   valor no item 0,6
+2) Não respondida 
+	valor no item 0
+3) Correto em 60% 
+	valor no item 0,3
+
+
+
+	total 0,9

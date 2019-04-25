@@ -1,0 +1,13 @@
+1) Na classe jogador faltou codificar corretamente o construtor e o método com a formula solicitada na questão. 
+   Não implementou a classe super jogador. 
+   Não implementou a logica de programação solicitada no exercício
+
+   valor no item 0,6
+
+2) Errado 
+	valor no item 0
+3) Errado 
+	valor no item 0
+
+
+valor total  0,6 

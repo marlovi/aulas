@@ -1,0 +1,17 @@
+1) Faltou o construtor com o parâmetro nome na classe jogador, também faltou na classe jogador o método para calcular a eficiência conforme enunciado. 
+	Na classe super jogador, faltou passar o nome como parâmetro, também faltou fazer a sobrescrita de método conforme enunciado. 
+O código na classe lógica não resolve o que o enunciado do exercício solicitou.
+Não desenvolveu a main
+
+ 
+
+	valor no item 1,0 
+
+2) Correto em 10% da questão
+	valor no item 0,1 
+
+3) Correto em 50% da questão.
+	valor no item 0,3 
+
+
+	valor da avaliação 1,4 

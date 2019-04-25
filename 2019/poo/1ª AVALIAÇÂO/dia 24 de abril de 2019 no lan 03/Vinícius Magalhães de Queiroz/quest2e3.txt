@@ -1,0 +1,23 @@
+2 - Função template é uma função que possui finalidade genérica para um códfigo. Sua utilização basea-se quando precisamos
+realizar uma devida ação como somar valores, mas nãp sabemos qual será o tipo de valor informado.
+Exemplo:
+quando queremos fazer soma de valores de float, double e int na criação e passagem de parametros definimos "const&", pois ele ira 
+pegar o tipo do dados e realizar a ação com o mesmo.
+
+
+3 - polimorfismo é um conjunto de métodos que pode ser utilizado genericamente por qualquer classe se ela tiver erdado atravez de uma herança;
+exemplo:
+    class Logica{
+    vector<Jogador* > vetA;
+
+    vector<SuperJogador* > vetB;
+
+  public:
+    void iniciar();
+    void cadastro1(Jogador* jog, string nome);
+    void cadastro2(SuperJogador* s, string nome);     // aqui se encontra um polimorfismo;
+    void TimeEfic();
+    void imprimir();
+    int menu1();
+    int menu2();
+};

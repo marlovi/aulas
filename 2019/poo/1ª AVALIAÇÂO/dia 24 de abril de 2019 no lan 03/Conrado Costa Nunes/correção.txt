@@ -1,0 +1,16 @@
+1) Na classe jogador, não desenvolveu o método construtor que o exercício solicitou
+   Na formula codificado no método getEficienciaA está incorreto pois a multiplicação é pelo overall não pela um leitura do usuário. 
+   O Exercício não solicitou que era para desenvolver um método getEficienciaA e outro getEficienciaB
+   Faltou desenvolver a classe Super Jogador.
+   A lógica de programação chegou próximo do que foi solicitado porém, faltou fazer corretamente as definições de classes e métodos supracitados no exercício
+
+   total no item 1,5 
+
+2) 30% Correto
+	nota no item 0,2 
+3) Errado. 
+	nota no item 0 
+
+
+
+	total da avaliação 1,7

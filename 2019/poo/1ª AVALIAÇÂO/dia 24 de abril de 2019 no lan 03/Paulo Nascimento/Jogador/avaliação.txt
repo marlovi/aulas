@@ -1,0 +1,15 @@
+
+1) Não fez o que o enunciado solicitou, a classe jogador está faltando o construtor da classe conforme enunciado, e método que realiza o sorteio. 
+    Não desenvolveu a classe super jogador, e suas especificidades. 
+
+    valor do item 0,5 
+
+
+2) Errado
+  valor no item 0
+3) Correto
+	valor no item 0,5
+
+
+
+	total 1,0 

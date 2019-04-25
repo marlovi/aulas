@@ -1,0 +1,58 @@
+Classe: classe é uma estrutura que se usa em programação orientada a objetos, que tem como o objetivo transformar uma entidade abstrata do mundo real, em uma ideia programável, abstraindo ela para fazer com que fique apenas com as características interessantes para se observar. É interessante utilizar a classe quando se precisa criar um objeto para desenvolver aplicações e tornar a chamada dos atributos e métodos viável. Dentro de uma classe, as propriedades intrínsecas se dão pelos atributos (características especiais da classe) e os métodos (ações que as características podem fazer).
+
+Exemplo:
+
+Estrutura de uma classe:
+----------------------------------------------------------------------------------
+class Aluno 
+{ private: 
+	string nome; ----------> 1º atributo
+	string rg; ------------> 2º atributo
+	string cpf; -----------> 3º atributo
+	
+	public:
+		string getNome(); --------------> 1º método
+		string getRg();-----------------> 2º método
+		string getCpf();----------------> 3º método
+		void setNome(const string &);---> 4º método
+		void setRg(const string &);-----> 5º método
+		void setCpf(const string &);----> 6º método
+};
+----------------------------------------------------------------------------------
+
+Objeto: se classe é o conceito abstraído de algo, o objeto é esse "algo" propriamente dito. Seria como se a ideia da classe, com todos os atributos e métodos (suas funcionalidades) passasse a existir no mundo programável. Por isso, quando se instancia um objeto, quer dizer que ele foi criado. No exemplo acima da classe Aluno, o aluno se tornaria palpável. Tem que usar o objeto para conseguirmos trabalhar ele na programação e sua lógica como um todo.
+
+Exemplo:
+
+int main(){
+
+Aluno *aluno = new Aluno(); --------> instanciando um objeto da classe Aluno, para que seu enredeço de memória seja guardado em *aluno.
+
+return 0;
+}
+
+
+Encapsulamento: encapsulamento é tornar restrito informações da classe para que se tenha maior controle e organização do que está sendo passado para outros pontos de comunicação que essa clasee faça. O encapsulamento funciona como uma proteção (realmente uma cápsula) como ponte da comunicação de dentro/fora da classe. Existem três tipos de proteção por encapsulamento:
+Privado: apenas a classe por usar o membro.
+Protegido: a classe e as subclasses podem usar.
+Público: todos têm acesso.
+
+Exemplo:
+
+No exemplo da classe, fica claro o uso de encapsulamento por conta das palavras puclic e private, deixando privado os atributos e públicos os métodos.
+
+class Aluno 
+{ private: --------------------> técnica de encapsulamento utilizando o tipo privado
+	string nome; 
+	string rg; 
+	string cpf; 
+	
+	public: -------------------> técnica de encapsulamento utilizando o tipo público
+		string getNome(); 
+		string getRg();
+		string getCpf();
+		void setNome(const string &);
+		void setRg(const string &);
+		void setCpf(const string &);
+};
+

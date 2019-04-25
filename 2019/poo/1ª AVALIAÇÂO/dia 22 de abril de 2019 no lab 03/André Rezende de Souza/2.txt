@@ -1,0 +1,3 @@
+Classe: estrutura que define a organização de objetos em um certo formato.
+Objeto: parte de uma classe, representando um tipo de dado específico.
+Encapsulamento: define como os objetos de uma certa classe podem ou não ser acessados por outros métodos no código.

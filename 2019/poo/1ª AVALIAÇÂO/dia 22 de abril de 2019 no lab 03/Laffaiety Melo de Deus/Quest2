@@ -1,0 +1,19 @@
+Uma classe é metodo que possibilita a criação de algo imaginario para o mundo real, ela é composta por atributos e métodos exemplo:
+
+class Jogador{ // declareção da classe e seu nome 
+    private:		|
+        string nome;	|---Atributos 
+        int overall;    |
+    public:
+    
+        void setNome(const string &nome);	|
+        void getNome();				|
+        void setOverall(const int &overall);	|----Métodos
+        void getOverall();			|
+
+        Jogador();				|método construtor da classe
+};
+Objeto é o metodo de encapsulamento de uma classe atráves da utilização de gets e sets.
+
+
+	

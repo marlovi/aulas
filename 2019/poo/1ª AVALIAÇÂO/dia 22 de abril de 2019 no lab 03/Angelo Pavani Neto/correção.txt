@@ -1,0 +1,16 @@
+1. Não Desenvolveu a classe SuperJogador. Não era para adicionar o atributo especialista na classe Jogador e sim na classe SuperJogador. 
+   Lógica de programação está correta. 
+
+   nota na questão   2,0  
+
+2. Definição de classe errada!!!
+    Definição de objeto insuficiente. 
+    Não está correta a definição de encapsulamento. 
+
+Exemplo prático está certo; 
+
+	total na questão 0,3
+
+
+
+Nota na avaliação 2,3

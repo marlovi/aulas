@@ -1,0 +1,12 @@
+1 Não utilizou as estruturas da forma que foi estudo. Não utilizou herança, não utilizou sobrecarga no método solicitado. 
+ nota na questão 0,1 
+
+2. Definição de classe incorreta. 
+   Definição de objetos incorreta. 
+   Definição de encapsulamento incorreta. 
+
+   nota na questão 0,1 
+
+
+
+   total na avaliação 0,2 

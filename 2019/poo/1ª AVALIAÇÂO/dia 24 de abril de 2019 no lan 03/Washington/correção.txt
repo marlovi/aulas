@@ -1,0 +1,13 @@
+1) Não resolveu o exercício conforme o enunciado solicitou
+	Não desenvolveu a classe super jogador conforme enunciado 
+	Não desenvolveu a sobrescrita de método conforme enunciado. 
+
+	valor no item 0,6
+2) Errado
+	valor no item 0
+3)Correto	
+	valor no item 0,5 
+
+
+
+	total 1,1 

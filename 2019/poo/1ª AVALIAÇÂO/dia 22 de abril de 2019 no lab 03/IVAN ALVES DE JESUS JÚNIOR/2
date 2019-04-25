@@ -1,0 +1,5 @@
+classe é aonde vai colocar cada objeto a qual ela pertencer.
+Tem as classes privadas aonde se recebe unicamente o seu devido declarado e as classes publicadas podendo receber qualquer declaração.
+Um objeto será aquilo que irar mover para as classes.
+Algumas caracteristicas são publicas e outras privadas. Privada : cor, publica carro.
+Encapsulamento e aonde estão aonde fica as duas classes. 

@@ -1,0 +1,6 @@
+1) totalmente errado 
+ 	valor do item 0,1 
+2) Errado
+	valor no item 0
+3) Errado
+	valor no item 0

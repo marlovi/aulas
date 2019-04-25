@@ -1,0 +1,16 @@
+1. Não passou o parâmetro nome, para o construtor do classe Jogador no arquivo .cc e no arquivo .h comentou a declaração do mesmo, o que torna esta parte do código incorreta com o enunciado da questão.
+   Devido a falta do parâmetro que o exercício solitou o construtor da subclasse também está incorreto. 
+   A sobreescrita foi desenvolvida corretamente. 
+   Main está fazendo o que o enunciado solicitou
+	total na questão 3,0 
+ 
+
+2. Definição de classe incorreta. 
+   Objeto (80% correta) 
+   Encapsulamento (correta) 
+
+	total na questão 0,7
+
+
+
+	total na avaliação 3,7

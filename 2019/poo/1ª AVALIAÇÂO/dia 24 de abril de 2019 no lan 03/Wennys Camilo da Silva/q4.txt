@@ -1,0 +1,10 @@
+Polimorfismo em progamação orientada a objetos é uma forma de usar funções com os mesmos nomes
+essa função só vai entrar em funcionamento quando seus parametros forem obedecidos;
+
+Exemplo:
+soma(int x, float y);
+soma(int x, int y);
+
+Passando como exemplo os Números 5 e 3.5
+A função que será atendida será essa: soma(int x, float y);
+Já que o primeiro valor é inteiro e o segundo é float obedecendo assim os parametros da função;

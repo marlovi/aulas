@@ -1,0 +1,11 @@
+
+1.	Não resolveu a questão, saiu do contexto. 
+
+	nota no item 0
+
+
+2. Definição de classe incorreta. 
+   Definição de objeto incorreta.
+   Definição de encapsulamento incorreta.
+
+   nota no item 0,1

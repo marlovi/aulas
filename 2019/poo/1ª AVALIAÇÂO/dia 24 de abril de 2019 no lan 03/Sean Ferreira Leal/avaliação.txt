@@ -1,0 +1,10 @@
+1)Correto 
+	valor no item 4,0 
+2) Errado
+	valor no item 0
+3) Correto 
+	valor no item 0,5
+
+
+
+	valor total 4,5 

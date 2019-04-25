@@ -1,0 +1,30 @@
+Classe:
+É aonde será definido, encapsulado e trabalhado.
+
+Ela é definida usando o comando:
+class NomedaClasse.
+
+Objeto:
+É o que é criado e moldado, onde é feito as alterações, por exemplo um objeto carro.
+
+class Carro{
+	private: 
+		int portas;
+		string marca;
+	
+}
+
+encapsulamento:
+É como consegue pegar os dados do private e dar metodos para poder modificar e poder ler eles, usando o mesmo exemplo do carro.
+
+class Carro{
+	private: 
+		int portas;
+		string marca;
+
+	public:
+		int getPortas();	|			
+		string getMarca();	|					
+                            |  esta é a parte em que acontece o encapsulamento        
+		void setPortas();	|					
+		void setMarca();	|		

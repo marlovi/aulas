@@ -1,0 +1,13 @@
+1) Não desenvolveu os arquivos jogador.h jogador.cc superjogador.h superjogador.cc, nã odesenvolveu o que o enunciado supracitou e solitou, fugindo totalmente do objetivo proposto. 
+ 	valor no item 0,2 
+2) Errada 
+	valor no item 0
+
+3) Errada
+	valor no item 0
+
+
+
+	total na avaliação 0,2 
+
+	

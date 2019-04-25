@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "vector": "cpp",
+        "string": "cpp",
+        "array": "cpp",
+        "initializer_list": "cpp"
+    }
+}

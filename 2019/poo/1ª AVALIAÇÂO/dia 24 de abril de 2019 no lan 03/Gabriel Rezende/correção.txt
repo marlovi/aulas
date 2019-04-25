@@ -1,0 +1,9 @@
+1) Não resolveu a questão
+	nota no item 0,1 
+2) 60% Correto
+	nota no item 0,3 
+3) Incorreto
+	nota no item 0 
+
+
+	total na avaliação 0,4

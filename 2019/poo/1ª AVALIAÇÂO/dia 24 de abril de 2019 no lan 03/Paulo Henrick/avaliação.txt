@@ -1,0 +1,18 @@
+
+1) Os métodos de encapsulamento não estão padronizados……... a segunda palavra do método deve  inicializar com letra maiúscula, também não desenvolveu-se o construtor conforme o exercício solicitava, também não codificou-se o método com a formula. 
+	Não desenvolveu a classe super jogador e suas configurações. 
+Apesar de na lógica tentar-se forçar uma resolução da questão, não foi desenvolvida a solução de maneira correta;
+
+
+valor no item 1,0 
+
+
+2) errado
+	valor no item 0
+3) Correto em 65% a questão
+	valor no item 0,3
+
+
+
+
+	total na avaliação 1,3 

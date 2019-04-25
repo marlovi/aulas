@@ -1,0 +1,12 @@
+1) Classe jogador incompleta. 
+ 	Classe super jogador não desenvolvida 
+ 	Main não condiz com o enunciado 
+
+ 	valor no item 0,3  
+2) Correto
+	valor no item 0,5
+3) Correto 
+	valor no item 0,5
+
+
+	total 1,3 

@@ -1,0 +1,11 @@
+Questa 2
+
+Funçoes de tipo template sao as que nao contem um retorno predeterminado,
+abrindo assim a oportunidade de trabalhar com qualquer tipo de dado, podendo manipular
+o que será devolvido pelo método por meio dos parâmetros.
+
+Questão 3
+
+O polimorfismo acontece quando duas ou mais funções tem a mesma assinatura, tendo 
+sua parametragem diferente, seja seu tipo de dado ou a quantidade de parâmetros. Podendo assim
+executar diferentes tarefas mesmo tendo o mesmo nome.

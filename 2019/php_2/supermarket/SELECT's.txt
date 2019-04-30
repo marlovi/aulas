@@ -1,0 +1,19 @@
+﻿//Pesquisar todos os usuarios campos : nome, email, rg, cpf, telefone,
+
+SELECT usuario.nome, usuario.email, usuario.rg, usuario.cpf, telefone.ddd, telefone.telefone FROM usuario INNER JOIN usuario_telefone ON usuario.id_usuario = usuario_telefone.usuario_id_usuario INNER JOIN telefone ON usuario_telefone.telefone_id_telefone = telerone.id_telefone;
+
+//Ler tudo de um usuario;
+
+SELECT usuario.senha, usuario.id_usuario, usuario.nome, usuario.email, usuario.rg, usuario.cpf, endereco.cep,
+endereco.rua, endereco.bairro, endereco.num, endereco.complemento, cidade.id_cidade as cidade, estado.id_estado 
+as estado, telefone.ddd, telefone.telefone FROM usuario 
+INNER JOIN usuario_endereco ON usuario.id_usuario = usuario_endereco.usuario_id_usuario 
+INNER JOIN endereco ON usuario_endereco.endereco_id_endereco = endereco.id_endereco
+INNER JOIN cidade ON endereco.cidade_id_cidade = cidade.id_cidade 
+INNER JOIN estado ON cidade.estado_id_estado = estado.id_estado 
+INNER JOIN usuario_telefone ON usuario.id_usuario = usuario_telefone.usuario_id_usuario
+INNER JOIN telefone ON usuario_telefone.telefone_id_telefone = telefone.id_telefone
+WHERE usuario.id_usuario = 13;
+
+
+//// Parte de produto

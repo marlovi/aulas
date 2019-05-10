@@ -29,6 +29,16 @@ class UserRouter extends router_1.Router {
             }).catch(next);
             return next();
         });
+        application.post('/login', (req, resp, next) => {
+            let obj = new user_model_1.User(req.body);
+            console.log(obj);
+            user_model_1.User.findOne({ $and: [{ "email": obj.email }, { "password": obj.password }] })
+                .then(u => {
+                console.log(u);
+                resp.json(u);
+                return next();
+            }).catch(next);
+        });
         application.del('/user/:id', (req, resp, next) => {
             user_model_1.User.remove({ _id: req.params.id }).exec().then((result) => {
                 if (result.n)

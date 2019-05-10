@@ -24,4 +24,9 @@ export class UsuarioService {
    return this.http.delete<User>(`http://localhost:3000/user/${user._id}`)
      
    }
+
+
+   public login(user:User):Observable<User>{
+    return this.http.post<User>('http://localhost:3000/login',user)
+   }
 }

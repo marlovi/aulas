@@ -6,6 +6,7 @@ import {CadastroComponent} from './pagina/conteudo/usuario/cadastro/cadastro.com
 import { PesquisarComponent } from './pagina/conteudo/usuario/pesquisar/pesquisar.component';
 import { UpdateComponent } from './pagina/conteudo/usuario/update/update.component';
 import { DeleteComponent } from './pagina/conteudo/usuario/delete/delete.component';
+import { LoginComponent } from './pagina/login/login.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ export const routes: Routes = [
   {path:'pesquisar' ,component:PesquisarComponent},
   {path:'inicial'   ,component:InicialComponent},
   {path:'update'    ,component:UpdateComponent},
-  {path:'delete'    ,component:DeleteComponent}
+  {path:'delete'    ,component:DeleteComponent},
+  {path:'login'     ,component:LoginComponent}
   
 ]

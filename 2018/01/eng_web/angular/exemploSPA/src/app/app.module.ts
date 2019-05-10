@@ -14,6 +14,7 @@ import { PesquisarComponent } from './pagina/conteudo/usuario/pesquisar/pesquisa
 import { UpdateComponent } from './pagina/conteudo/usuario/update/update.component';
 import { DeleteComponent } from './pagina/conteudo/usuario/delete/delete.component';
 import { BrowserCookiesModule } from '@ngx-utils/cookies/browser';
+import { LoginComponent } from './pagina/login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BrowserCookiesModule } from '@ngx-utils/cookies/browser';
     CadastroComponent,
     PesquisarComponent,
     UpdateComponent,
-    DeleteComponent
+    DeleteComponent,
+    LoginComponent
     
   ],
   imports: [

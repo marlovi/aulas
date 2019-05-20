@@ -1,0 +1,6 @@
+#include "autonomo.h"
+
+bool Autonomo::baterPonto(){
+  return false; 
+}
+

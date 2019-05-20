@@ -1,0 +1,10 @@
+#ifndef ENFERMEIRO_H
+#define ENFERMEIRO_H
+
+class Enfermeiro{
+ public:
+  float receberSalario();
+  bool baterPonto();
+}; 
+
+#endif

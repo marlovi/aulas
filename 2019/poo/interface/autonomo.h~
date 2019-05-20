@@ -1,0 +1,11 @@
+#ifndef AUTONOMO_H
+#define AUTONOMO_H
+#include<string>
+using namespace std;
+class Autonomo{
+ private:
+  string nome;
+ public:
+  bool baterPonto(); 
+};
+#endif

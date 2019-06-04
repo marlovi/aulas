@@ -1,0 +1,11 @@
+#include "contabancaria.h"
+#include "contacorrente.h"
+
+int main(int argc, char** argv){
+
+	new ContaCorrente();
+	return 0;
+}
+
+
+

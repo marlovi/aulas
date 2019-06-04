@@ -1,0 +1,8 @@
+#include "contapoupanca.h"
+
+void ContaPoupanca::setLimite(const double &limite){
+  this->limite = limite;
+}
+double ContaPoupanca::getLimite(){
+  return this->limite;
+}

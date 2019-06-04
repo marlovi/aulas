@@ -1,0 +1,10 @@
+#ifndef POUPANCA_H
+#define POUPANCA_H
+
+#include "contabancaria.h"
+class Poupanca : public ContaBancaria {
+ private:
+ public:
+};
+
+#endif

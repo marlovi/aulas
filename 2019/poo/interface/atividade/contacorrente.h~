@@ -1,0 +1,14 @@
+#ifndef CONTA_CORRENTE_H
+#define CONTA_CORRENTE_H 
+#include "contabancaria.h"
+	class ContaCorrente : public ContaBancaria{
+		private:
+			double taxaDeOperacao;
+		public:
+			double getTaxaDeOperacao();
+			void setTaxaDeOperacao(const double &); 
+			void sacar(const double &); 
+			void depositar(const double &); 
+	};
+
+#endif

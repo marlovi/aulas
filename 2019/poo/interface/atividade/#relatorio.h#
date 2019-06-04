@@ -1,0 +1,9 @@
+#ifndef RELATORIO_H
+#define RELATORIO_H
+#include "imprimir.h"
+class Relatorio{
+ public:
+  void gerarRelatorio(Imprimir* imprimir)
+};
+
+#endif

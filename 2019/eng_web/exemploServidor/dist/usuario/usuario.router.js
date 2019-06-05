@@ -12,10 +12,14 @@ class UsuarioRouter extends router_1.Router {
         });
         app.post('/usuario', (req, resp, next) => {
             let usuario = new usuario_model_1.Usuario(req.body);
-            usuario.save().then(usuario => {
-                //usuario.password = undefined
-                resp.json(usuario);
-            }).catch(next);
+            /*
+                        usuario.save().then(usuario =>{
+                            //usuario.password = undefined
+                            resp.json(usuario)
+            
+                        }).catch(next)*/
+            resp.json(usuario);
+            console.log(JSON.stringify(usuario));
             return next();
         });
         app.patch('/usuario/:id', (req, resp, next) => {

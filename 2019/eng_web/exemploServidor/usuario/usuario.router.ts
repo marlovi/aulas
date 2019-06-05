@@ -16,12 +16,15 @@ class UsuarioRouter extends Router {
         app.post('/usuario',(req,resp,next) =>{
              let usuario  = new Usuario(req.body)
             
-
+/*
             usuario.save().then(usuario =>{
                 //usuario.password = undefined
                 resp.json(usuario)
 
-            }).catch(next)
+            }).catch(next)*/
+
+            resp.json(usuario)
+            console.log(JSON.stringify(usuario))
          return next();
         })
 

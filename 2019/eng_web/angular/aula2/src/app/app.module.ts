@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +12,8 @@ import { NavegacaoComponent } from './pagina/navegacao/navegacao.component';
 import { CadastroComponent } from './crud/usuario/cadastro/cadastro.component';
 import { InicialComponent } from './pagina/inicial/inicial.component';
 
+
+import { ComunicacaoService } from './crud/usuario/comunicacao.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,12 +21,16 @@ import { InicialComponent } from './pagina/inicial/inicial.component';
     NavegacaoComponent,
     CadastroComponent,
     InicialComponent
+    
   ],
   imports: [
+    FormsModule,
+    
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ComunicacaoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,10 +13,10 @@ export class Server{
     })
 
     inicializarDb():any{
-        (<any>mongoose).Promise = global.Promise //obrigatório
+       /* (<any>mongoose).Promise = global.Promise //obrigatório
         return mongoose.connect('mongodb://localhost/exemplo',{useNewUrlParser: true}).then(
             () => console.log('Banco de dados conectado')
-        ).catch((err)=> {throw err})
+        ).catch((err)=> {throw err})*/
     }
 
     initRoutes(routers: Router[]):Promise <any>{
@@ -54,11 +54,16 @@ export class Server{
     }
 
     inicializarServer(routers : Router[]) : Promise<Server>{
-        return this.inicializarDb().then(
+
+return this.initRoutes(routers).then(
+    () => this
+)
+
+       /* return this.inicializarDb().then(
             ()=> this.initRoutes(routers).then(
                 () => this
             )
-        )
+        )*/
     }
  }
 

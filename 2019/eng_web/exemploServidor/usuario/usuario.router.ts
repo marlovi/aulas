@@ -12,16 +12,32 @@ class UsuarioRouter extends Router {
                 return next();
             }).catch(next)
         })
+        app.get('/usuario/:id',(req,resp,next) =>{
+            Usuario.findById({_id:req.params.id}).then( user => {
+                resp.json(user)
+                return next();
+            }
+
+            ).catch(next)
+        })
+        app.get('/usuarioemail/:email',(req,resp,next) =>{
+            Usuario.find({email:{'$regex':req.params.email}})
+            .sort({email: 1}).then( user =>{
+                resp.json(user)
+                return next();
+            }).catch(next)
+           
+        })
 
         app.post('/usuario',(req,resp,next) =>{
              let usuario  = new Usuario(req.body)
             
-/*
+
             usuario.save().then(usuario =>{
                 //usuario.password = undefined
                 resp.json(usuario)
 
-            }).catch(next)*/
+            }).catch(next)
 
             resp.json(usuario)
             console.log(JSON.stringify(usuario))
@@ -39,8 +55,10 @@ class UsuarioRouter extends Router {
         })
         app.del('/usuario/:id', (req,resp,next) =>{
             Usuario.remove({_id:req.params.id}).exec().then(result   =>{
-                if(result.n) 
-                    resp.send(204)
+                if(result.n){
+                    resp.send(204)                         
+                } 
+                                
                 else resp.send(404)
             })
         })

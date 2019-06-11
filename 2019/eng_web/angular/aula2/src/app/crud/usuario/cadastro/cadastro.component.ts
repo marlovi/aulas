@@ -16,8 +16,11 @@ export class CadastroComponent implements OnInit {
   }
 
   chamandoServico(){
-    this.servico.getAluno(this.aluno).subscribe( al =>{
+    this.servico.save(this.aluno).subscribe( al =>{
       console.log('comunicação retornou o objeto ')
+      window.alert('Aluno cadastrado com sucesso!')
+
+      this.aluno = new Aluno //criando um novo objeto para limpar a tela
       console.log(al)
     
     }

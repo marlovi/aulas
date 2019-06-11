@@ -19,7 +19,7 @@ const usuarioSchema = new mongoose.Schema({
         unique: true
     },password:{
         type: String,
-        select:false
+        select:true
     },
     telefone:{
         type: String

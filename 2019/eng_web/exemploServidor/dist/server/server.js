@@ -11,6 +11,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const restify = __importStar(require("restify"));
+const mongoose_1 = __importDefault(require("mongoose"));
 const restify_cors_middleware_1 = __importDefault(require("restify-cors-middleware"));
 const error_1 = require("./error");
 class Server {
@@ -21,10 +22,8 @@ class Server {
         });
     }
     inicializarDb() {
-        /* (<any>mongoose).Promise = global.Promise //obrigatório
-         return mongoose.connect('mongodb://localhost/exemplo',{useNewUrlParser: true}).then(
-             () => console.log('Banco de dados conectado')
-         ).catch((err)=> {throw err})*/
+        mongoose_1.default.Promise = global.Promise; //obrigatório
+        return mongoose_1.default.connect('mongodb://localhost/exemplo', { useNewUrlParser: true }).then(() => console.log('Banco de dados conectado')).catch((err) => { throw err; });
     }
     initRoutes(routers) {
         return new Promise((resolve, reject) => {
@@ -54,12 +53,7 @@ class Server {
         });
     }
     inicializarServer(routers) {
-        return this.initRoutes(routers).then(() => this);
-        /* return this.inicializarDb().then(
-             ()=> this.initRoutes(routers).then(
-                 () => this
-             )
-         )*/
+        return this.inicializarDb().then(() => this.initRoutes(routers).then(() => this));
     }
 }
 exports.Server = Server;

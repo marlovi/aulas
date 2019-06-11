@@ -14,13 +14,17 @@ import { InicialComponent } from './pagina/inicial/inicial.component';
 
 
 import { ComunicacaoService } from './crud/usuario/comunicacao.service';
+
+import { PesquisarComponent } from './crud/usuario/pesquisar/pesquisar.component';
+import { UpdateComponent } from './crud/usuario/update/update.component';
 @NgModule({
   declarations: [
     AppComponent,
     RodapeComponent,
     NavegacaoComponent,
     CadastroComponent,
-    InicialComponent
+    InicialComponent,    
+    PesquisarComponent, UpdateComponent
     
   ],
   imports: [

@@ -1,0 +1,39 @@
+<div class="container">
+  <!-- Conteúdo aqui -->
+  <div class="form-group">
+     <br>
+      <div class="input-group col-12">
+          <label class="control-label col-2">E-mail</label>
+        <input class="form-control" type="text" (keydown)="onKeydown($event)" name="inputEmail"  [(ngModel)]="inputEmail">
+        <button type="submit" class="btn btn-primary"    (click)='pesquisarAlunos()' >Todos <span class="ion ion-md-search"></span></button>
+      </div>
+  </div>
+    
+  <div class="row">
+    <div class="col">
+ <br>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Email</th>
+      <th scope="col">password</th>
+      <th scope="col" style="text-align: center;">Alterar</th>
+      <th scope="col" style="text-align: center;">Excluir</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let aluno of alunos">
+      <th scope="row">{{aluno._id}}</th>
+      <td>{{aluno.email}}</td>
+      <td>{{aluno.password}}</td>
+      <td style="text-align: center;">  <a [routerLink]="['/updateusuario/',aluno._id]"><span class="ion ion-md-bonfire" style="zoom:1.5;"></span></a>  </td>
+      <td style="text-align: center;">  <a [routerLink]="" (click)="delete(aluno)"><span class="ion ion-md-close-circle" style="zoom:1.5;"></span></a>  </td>
+    </tr>
+    
+  </tbody>
+</table>
+    </div>
+  </div> 
+</div>
+

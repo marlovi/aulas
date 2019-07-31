@@ -1,0 +1,29 @@
+#include "stdio.h"
+
+
+
+
+
+
+
+int menu();
+int main(){
+
+  int op;
+
+  do{
+    op = menu();
+  }while(op !=0 );
+  return 0;
+}
+
+int menu(){
+  int op;
+  
+
+  printf("Digite 1 para .....\n");
+  printf("Digite 0 para Sair \n");
+  scanf("%d",&op);
+
+  return op;
+}

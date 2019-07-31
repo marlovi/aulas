@@ -1,0 +1,6 @@
+Contar o número de nós folhas de uma árvore binária de busca.
+
+Gerar o conjunto de chaves para compactação de huffman para o seguinte conjunto de frequências. 
+A=33 B=12 C=8 D=12 E=18 F=9 G=13 O=25 U=17
+
+Cnceitue

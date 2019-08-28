@@ -1,0 +1,25 @@
+#include "stdio.h"
+
+typedef struct {
+  int idade;  
+  int altura;
+}Pessoa;
+
+
+
+
+
+
+
+int main(){
+  Pessoa joao;
+  Pessoa maria;
+
+  printf("Informe a idade do joão\n");
+  scanf("%d",& joao.idade);
+
+  printf("Informe a idade da maria \n");
+  scanf("%d",& maria.idade);
+  
+  printf("%d ",joao.idade); 
+}

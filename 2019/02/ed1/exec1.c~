@@ -1,0 +1,15 @@
+#include "stdio.h"
+
+
+typedef struct {
+  char nome[250];
+  float nota1;
+  float nota2;
+  int matricula;
+  
+}Aluno;
+
+int main(){
+  return 0;
+}
+

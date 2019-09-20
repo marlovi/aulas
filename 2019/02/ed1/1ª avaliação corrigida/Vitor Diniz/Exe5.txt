@@ -1,0 +1,1 @@
+Os valores respectivos de func(4) = 6 e de func(5) = 24.

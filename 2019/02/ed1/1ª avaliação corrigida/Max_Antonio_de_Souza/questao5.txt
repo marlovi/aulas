@@ -1,0 +1,32 @@
+5) Considere a função recursiva ‘func’ definida por:
+func(1) = 1
+func(n) = (n - 1) * func(n - 1)
+Quais são os valores de func(4) e func(5), respectivamente?
+
+temos que:
+
+f(1)=1;
+
+Então, substituindo 2 e 3 na função geral temos, a titulo de exemplo:
+
+f(2)=(2-1)*f(2-1)
+f(2)=(1)*f(1)
+f(2)=1*1
+f(2)=1
+
+f(3)=(3-1)*f(3-1)
+f(3)=(2)*f(2)
+f(3)=2*1
+f(3)=2
+
+Portanto, seguindo esse raciocinio, temos que f(4) e f(5) são:
+
+f(4)=(4-1)*f(4-1)
+f(4)=(3)*f(3)
+f(4)=3*2
+f(4)=6
+
+f(5)=(5-1)*f(5-1)
+f(5)=(4)*f(4)
+f(5)=4*6
+f(5)=24

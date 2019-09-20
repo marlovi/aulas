@@ -1,0 +1,28 @@
+#include "stdlib.h"
+#include "stdio.h"
+
+
+
+int main(){
+  int valor;
+  int *vetor;
+  int cont =1;
+
+  do{
+    printf("Informe um valor \n");
+    scanf("%d",&valor);
+    if(valor < 0 ) break;
+    vetor = realloc(vetor,sizeof(int) * cont);
+    cont++;
+  }while(valor>0);
+
+  int i=0;
+  while(i < cont-1) {
+    printf("%d \n",vetor[i]);
+    i++;
+  }
+  return 0;
+}
+
+
+

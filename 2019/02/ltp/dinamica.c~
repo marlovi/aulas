@@ -1,0 +1,13 @@
+#include "stdio.h"
+#include "stdlib.h"
+
+
+int main(){
+  int tamanho;
+  int *vetor; 
+  printf("Informe o tamanho do vetor a ser alocado dinamicamente \n");
+  scanf("%d",&tamanho);
+  vetor = malloc(sizeof(int)*tamanho);
+
+  free(vetor);
+}

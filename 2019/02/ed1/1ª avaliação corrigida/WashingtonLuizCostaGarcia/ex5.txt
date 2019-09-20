@@ -1,0 +1,10 @@
+5) Considere a função recursiva ‘func’ definida por:
+func(1) = 1
+func(n) = (n - 1) * func(n - 1)
+Quais são os valores de func(4) e func(5), respectivamente?
+
+func(1)= 1 = 1
+func(2)= 1*2 = 2
+func(3)= 1*2*3 = 6
+func(4)= 1*2*3*4 = 24
+func(5)= 1*2*3*4*5 = 120

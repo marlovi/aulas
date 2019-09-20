@@ -1,0 +1,5 @@
+O valor da função recursiva f(n) para quando:
+
+f(4) = 6;
+
+f(5) = 24;

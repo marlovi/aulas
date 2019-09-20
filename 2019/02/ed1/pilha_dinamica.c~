@@ -1,0 +1,23 @@
+#include "stdio.h"
+#include "stdlib.h"
+
+
+struct aluno{
+  int matricula;
+  float n1,n2,n3; 
+};
+
+struct elemento{
+  struct aluno dados;
+  struct elemento *proximo; 
+};
+
+
+typedef struct elemento Elem;
+typedef struct elemento* Pilha;
+
+
+int main(){
+  Pilha *pi;
+  return 0;
+}

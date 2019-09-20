@@ -1,0 +1,8 @@
+Questao 5
+func(1)=1
+func(n)=(n-1)*func(n-1)
+func(2)=1
+func(3)=2
+
+func(4)=8
+func(5)=32

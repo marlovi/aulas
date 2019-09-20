@@ -1,0 +1,5 @@
+Questão 5:
+
+Valor de func(4): 6
+
+Valor de func(5): 24

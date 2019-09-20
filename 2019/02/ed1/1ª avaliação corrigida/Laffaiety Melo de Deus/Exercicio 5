@@ -1,0 +1,3 @@
+para func(4) os valores são 4,3,2,1
+para func(5) os valores são 5,4,3,2,1
+pois a função decrementa 1 a cada chamada.

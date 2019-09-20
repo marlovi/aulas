@@ -1,0 +1,2 @@
+Os valores F(4) é 6
+Os valores F(5) é 24

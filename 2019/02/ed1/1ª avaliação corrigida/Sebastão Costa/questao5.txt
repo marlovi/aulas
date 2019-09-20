@@ -1,0 +1,7 @@
+
+
+Volores obtidos através da função recursiva f(n) = f(n-1) * (n-1):
+
+ f(4) = 6
+ f(5) = 24
+

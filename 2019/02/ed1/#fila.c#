@@ -1,0 +1,90 @@
+#include "stdio.h"
+#include "stdlib.h"
+
+#define MAX 10
+
+enum{false,true};
+
+struct aluno{
+  int matricula;
+  char nome[30];
+  float n1,n2,n3; 
+};
+
+struct fila{
+  int inicio;
+  int fim;
+  int qtd;
+  struct aluno dados[MAX];
+};
+typedef struct fila Fila;
+
+
+
+Fila* criar_fila(){
+  Fila *f = (Fila*) malloc(sizeof(struct fila));
+  if(f != NULL ){
+    f->inicio = 0;
+    f->fim =0;
+    f->qtd = 0;
+  }
+  return f;
+}
+
+int tamanho_fila(Fila *f){
+  if(f == NULL){
+    return -1;
+  }
+  return f->qtd;
+}
+int fila_cheia(Fila *f){
+  if(f == NULL)
+    return -1;
+  if(f->qtd == MAX)
+    return true;
+  else
+    return false;
+}
+int fila_vazia(Fila *f){
+  if(f == NULL)
+    return -1;
+  if(f->qtd == 0)
+    return true;
+  else
+    return false;
+}
+
+
+int inserir_fila(Fila *f, struct aluno al){
+
+  if(f == NULL ) return -1;
+  if(fila_cheia(f)) return false;
+  f->dados[f->fim] = al;
+  f->fim = f->fim +1 ;
+  f->qtd++; 
+  return true;
+}
+
+int remove_fila(Fila *f){
+
+  if(f == NULL ) return -1;
+  if(fila_vazia(f))return false;
+  f->inicio = f->inicio+1;
+  f->qtd--;
+  return true;
+}
+
+int consulta(Fila *f, struct aluno *a){
+   if(f == NULL ) return -1;
+   if(fila_vazia(f))return false;
+   *a = f->dados[f->inicio];
+   return true; 
+}
+
+
+int main(){
+
+  Fila* fi = criar_fila(); //alocando a fila na memória do computador; 
+
+  return 0;
+}

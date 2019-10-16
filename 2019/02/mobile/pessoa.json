@@ -1,0 +1,17 @@
+[{
+
+    "nome":"Marlus Dias Silva",
+    "rg":"4569049DGPCGO", 
+    "idade": 32,
+    "cpf":"017.065.411-71",
+    "email":["marlus.silva@ifgoiano.edu.br",
+            "marlus.guitar@gmail.com"],
+    "whatsapp":"98136-0644",
+    "profissao":"Aspira a professor",
+    "servidor":true,
+    "notas":[9,8,7,6,5,4,3,0,2,1]
+ 
+
+},{
+    
+}]

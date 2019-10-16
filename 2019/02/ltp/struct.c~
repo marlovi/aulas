@@ -1,0 +1,17 @@
+#include "stdio.h"
+#include "stdlib.h"
+
+struct pessoa{
+  char nome[50];
+  char telefone[20];
+  char cidade[30];
+  int idade;
+  char email[50];
+  char profissao[20];
+};
+
+
+int main(){
+  struct pessoa joao; 
+  return 0;
+}

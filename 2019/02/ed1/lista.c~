@@ -1,0 +1,27 @@
+#include "stdio.h"
+#include "stdlib.h"
+enum{false,true};
+struct aluno{
+  int matricula;
+  char nome[30];
+  float n1,n2,n3;
+};
+struct elemento{
+  struct aluno dados;
+  struct elemento *prox; 
+};
+
+typedef struct elemento Elem;
+typedef struct elemento *Lista;
+
+Lista* criar_lista(){
+  Lista *l = malloc(sizeof(Lista));
+  if(l != NULL)
+    *l = NULL;
+  return l;
+}
+
+int main(){
+  Lista *li = criar_lista(); 
+  return 0;
+}

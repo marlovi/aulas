@@ -17,7 +17,7 @@
     "@types/mongoose": "^5.0.11",
     "@types/restify": "^5.0.7",
     "@types/restify-cors-middleware": "^1.0.1",
-    "mongoose": "^5.0.17",
+    "mongoose": "^5.7.5",
     "restify-cors-middleware": "^1.1.0"
   }
 }
